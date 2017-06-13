@@ -1,0 +1,398 @@
+#!region Copyright and License
+#! ================================================================================
+#!                         Devuna Date Time Picker Template
+#! ================================================================================
+#! Notice : Copyright (C) 2017, Devuna
+#!          Distributed under LGPLv3 (http://www.gnu.org/licenses/lgpl.html)
+#!
+#!    This file is part of Devuna-DateTimePicker (https://github.com/Devuna/Devuna-DateTimePicker)
+#!
+#!    datetimepicker.tpw is free software: you can redistribute it and/or modify
+#!    it under the terms of the GNU General Public License as published by
+#!    the Free Software Foundation, either version 3 of the License, or
+#!
+#!    datetimepicker.tpw is distributed in the hope that it will be useful,
+#!    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#!    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#!    GNU General Public License for more details.
+#!
+#!    You should have received a copy of the GNU General Public License
+#!    along with this file.  If not, see <http://www.gnu.org/licenses/>.
+#! ================================================================================
+#!endRegion
+#!
+#! ----------------------------------------------------------------
+#EXTENSION(KCR_DateTimePickerClass,'Add DateTimePicker Global Data'),APPLICATION,HLP('~KCR_DateTimePickerClass')
+#! ----------------------------------------------------------------
+#BOXED('Default MakeHead Prompts'),AT(0,0),WHERE(%False),HIDE
+  #INSERT(%MakeHeadHiddenPrompts)
+#ENDBOXED
+#PREPARE
+  #INSERT (%MakeHead,'KCR_DateTimePickerClass (Devuna)','Add DateTimePicker Class to Application')
+#ENDPREPARE
+#BOXED('Devuna')
+  #INSERT (%Head)
+  #DISPLAY ('This template adds the DateTimePicker class to the'),AT(10)
+  #DISPLAY ('application.  The template requires several win32'),AT(10)
+  #DISPLAY ('api functions that are prototyped by the template.'),AT(10)
+  #DISPLAY ('If the compiler complains about indistinguishable'),AT(10)
+  #DISPLAY ('new prototypes, you can turn off the prototypes by'),AT(10)
+  #DISPLAY ('unchecking the offending functions below.'),AT(10)
+  #DISPLAY ('')
+  #BOXED('Generate Function Prototypes')
+    #PROMPT('CallWindowProc',CHECK),%callWindowProc,AT(10),DEFAULT(%True)
+    #PROMPT('DestroyWindow',CHECK),%destroyWindow,AT(10),DEFAULT(%True)
+    #PROMPT('GetParent',CHECK),%getParent,AT(10),DEFAULT(%True)
+    #PROMPT('GetWindowLong',CHECK),%getWindowLong,AT(10),DEFAULT(%True)
+    #PROMPT('lstrlenW',CHECK),%lstrlenW,AT(10),DEFAULT(%True)
+    #PROMPT('memcpy',CHECK),%memcpy,AT(10),DEFAULT(%True)
+    #PROMPT('PostMessage',CHECK),%postMessage,AT(10),DEFAULT(%True)
+    #PROMPT('SendMessage',CHECK),%sendMessage,AT(10),DEFAULT(%True)
+    #PROMPT('SetWindowLong',CHECK),%setWindowLong,AT(10),DEFAULT(%True)
+    #PROMPT('strcpy',CHECK),%strcpy,AT(10),DEFAULT(%True)
+    #PROMPT('WidecharToMultibyte',CHECK),%widecharToMultibyte,AT(10),DEFAULT(%True)
+  #ENDBOXED
+  #DISPLAY ('')
+#ENDBOXED
+#!
+#!
+#!---------------------------------------------------------------
+#!#AT(%CustomGlobalDeclarations)
+#!  #IF(%Target32)
+#!  #ELSE
+#!    #ERROR('Error: DateTimePicker requires 32-bit application')
+#!  #ENDIF
+#!#ENDAT
+#!---------------------------------------------------------------
+#!
+#!
+#AT(%BeforeGlobalIncludes),PRIORITY(4000)
+   INCLUDE('DATETIMEPICK.INC'),ONCE
+
+tagNMHDR            GROUP,TYPE
+hwndFrom              UNSIGNED
+idFrom                UNSIGNED
+nmcode                UNSIGNED              !NM_ code
+                    END
+
+tagSYSTEMTIME       GROUP,TYPE              !System time struct
+wYear                 USHORT
+wMonth                USHORT
+wDayOfWeek            USHORT
+wDay                  USHORT
+wHour                 USHORT
+wMinute               USHORT
+wSecond               USHORT
+wMilliseconds         USHORT
+                    END
+
+tagNMDATETIMESTRING GROUP,TYPE
+nmhdr                   LIKE(tagNMHDR)
+pszUserString           ULONG               ! string user entered
+st                      LIKE(tagSYSTEMTIME) ! app fills this in
+dwFlags                 ULONG               ! GDT_VALID or GDT_NONE
+                    END
+
+#ENDAT
+#!
+#!
+#AT(%GlobalMap)
+MODULE('WIN32')
+  #IF(%CallWindowProc=%True)
+  callWindowProc(ULONG wndprcPrev,HWND hWindow,UINT uMsg,WPARAM wParameter,LPARAM lParameter),LONG,PASCAL,NAME('CallWindowProcA')
+  #ENDIF
+  #IF(%destroyWindow=%True)
+  destroyWindow(ULONG hWindow),LONG,PASCAL,PROC
+  #ENDIF
+  #IF(%getParent=%True)
+  GetParent(HWND),HWND,PASCAL
+  #ENDIF
+  #IF(%getWindowLong=%True)
+  GetWindowLong(HWND,SHORT),LONG,RAW,PASCAL,NAME('GetWindowLongA')
+  #ENDIF
+  #IF(%lstrlenW=%True)
+  lstrlenW(LONG lpWString),SIGNED,PROC,PASCAL
+  #ENDIF
+  #IF(%postMessage=%True)
+  PostMessage(UNSIGNED,UNSIGNED,UNSIGNED,LONG),LONG,PASCAL,NAME('PostMessageA'),PROC
+  #ENDIF
+  #IF(%sendMessage=%True)
+  SendMessage(UNSIGNED,UNSIGNED,UNSIGNED,LONG),LONG,PASCAL,NAME('SendMessageA'),PROC
+  #ENDIF
+  #IF(%setWindowLong=%True)
+  SetWindowLong(HWND,SHORT,LONG),LONG,RAW,PASCAL,NAME('SetWindowLongA'),PROC
+  #ENDIF
+  #IF(%widecharToMultibyte=%True)
+  widecharToMultibyte(ULONG uCodePage,ULONG dwFlags,LONG lpWideCharStr,LONG nWideCharLen,LONG lpMultiByteStr,lONG nMultiByteLength,LONG lpDefaultChar,LONG lpfUsedDefaultChar),BOOL,PASCAL,RAW,PROC
+  #ENDIF
+END
+MODULE('CLIB')
+  #IF(%memcpy=%True)
+  memcpy(ulong,ulong,unsigned),name('_memcpy')
+  #ENDIF
+  #IF(%strcpy=%True)
+  strcpy(ulong,ulong),name('_strcpy')
+  #ENDIF
+END
+#ENDAT
+#!
+#!
+#AT(%GlobalData)
+DTP:hwndMonthCal    HWND
+#ENDAT
+#!
+#!
+#!
+#!
+#! ----------------------------------------------------------------
+#EXTENSION(KCR_SubClassClientWindow,'SubClass Client Window Extension'),PROCEDURE,REQ(KCR_DateTimePickerClass)
+#! ----------------------------------------------------------------
+#BOXED('Default MakeHead Prompts'),AT(0,0),WHERE(%False),HIDE
+  #INSERT(%MakeHeadHiddenPrompts)
+#ENDBOXED
+#PREPARE
+  #INSERT (%MakeHead,'KCR_SubClassClientWindow (Devuna)','SubClass Client Window Extension')
+#ENDPREPARE
+#BOXED('Devuna')
+  #INSERT (%Head)
+  #DISPLAY ('This template adds a procedure to handle messages sent'),AT(10)
+  #DISPLAY ('to the Client Window.'),AT(10)
+  #DISPLAY ('')
+  #DISPLAY ('There are no prompts for this template.')
+  #DISPLAY ('')
+#ENDBOXED
+#!
+#AT(%ModuleDataSection)
+  #SET(%ValueConstruct,'sav:' & %Procedure & '::ClientWndProc:' & %ActiveTemplateInstance)
+%[23]ValueConstruct LONG
+#ENDAT
+#!
+#AT(%CustomModuleDeclarations)
+  #ADD(%CustomModuleMapModule,'CURRENT MODULE')
+  #SET(%ValueConstruct, ' ' & %Procedure & '::ClientWndProc:' & %ActiveTemplateInstance)
+  #ADD(%CustomModuleMapProcedure,%ValueConstruct)
+  #SET(%CustomModuleMapProcedurePrototype,'(HWND hWnd, UINT wMsg, WPARAM wParam, LPARAM lParam),LONG,PASCAL')
+#ENDAT
+#!
+#AT(%WindowManagerMethodCodeSection,'Init','(),BYTE'),PRIORITY(8200),DESCRIPTION('SubClassClientWindow: Init')
+sav:%Procedure::ClientWndProc:%ActiveTemplateInstance = %Window{Prop:ClientWndProc}   #<! Save address of code that handles client window messages
+%Window{Prop:ClientWndProc} = ADDRESS(%Procedure::ClientWndProc:%ActiveTemplateInstance) #<! Re-assign address of code that handles client window messages
+#ENDAT
+#!
+#AT(%WindowManagerMethodCodeSection,'Kill','(),BYTE'),PRIORITY(1000),DESCRIPTION('SubClassClientWindow: Kill')
+IF sav:%Procedure::ClientWndProc:%ActiveTemplateInstance
+   %Window{Prop:ClientWndProc} = sav:%Procedure::ClientWndProc:%ActiveTemplateInstance #<! Restore the handler for this client window
+   sav:%Procedure::ClientWndProc:%ActiveTemplateInstance = 0
+END
+#ENDAT
+#!
+#!------------------------------------------------------------
+#AT(%LocalProcedures)
+%Procedure::ClientWndProc:%ActiveTemplateInstance PROCEDURE(HWND hWnd, UINT wMsg, WPARAM wParam, LPARAM lParam)
+DTP     &DTPicker
+NMData  GROUP(tagNMHDR),PRE(),AUTO
+        END
+#EMBED(%SubClassClientWindowDataSection,'SubClassClientWindow:  Data Section')
+    CODE
+    #EMBED(%SubClassClientWindowBeginCodeSection,'SubClassClientWindow:  Start of Code')
+    CASE wMsg
+    #EMBED(%SubClassClientWindowCaseSection,'SubClassClientWindow:  Inside CASE MESSAGE statement')
+    OF WM_NOTIFY
+       PEEK(lParam,NMData)
+       IF NMData.nmCode >= DTN_FIRST AND NMData.nmCode <= DTN_LAST
+          DTP &= GetWindowLong(NMData.hWndFrom,GWL_USERDATA)
+          DTP.Notify(hWnd,wParam,NMData.nmCode) !Further processing of WM_NOTIFY
+       END
+       #EMBED(%SubClassClientWindowNotifySection,'SubClassClientWindow:  Inside CASE OF WM_NOTIFY statement')
+    END
+    #EMBED(%SubClassClientWindowEndCodeSection,'SubClassClientWindow:  End of Code')
+    RETURN(CallWindowProc(sav:%Procedure::ClientWndProc:%ActiveTemplateInstance,hWnd,wMsg,wParam,lParam))
+#ENDAT
+#!
+#!
+#!
+#!
+#! ----------------------------------------------------------------
+#CONTROL(KCR_DateTimeControl,'Add DateTimePicker Control to Procedure'),PROCEDURE,MULTI,REQ(KCR_SubClassClientWindow),HLP('~KCR_DateTimePicker')
+#! ----------------------------------------------------------------
+#!
+  CONTROLS
+       BOX,AT(,,60,12),USE(?DateTimePicker),COLOR(COLOR:Gray)
+  END
+#!
+#BOXED('Default MakeHead Prompts'),AT(0,0),WHERE(%False),HIDE
+  #INSERT(%MakeHeadHiddenPrompts)
+#ENDBOXED
+#PREPARE
+  #INSERT (%MakeHead,'KCR_DateTimePicker (Devuna)','Add DateTimePicker to Procedure')
+  #DECLARE(%LongVariable),MULTI,UNIQUE
+  #FOR(%LocalData)
+    #IF(INSTRING('LONG',%LocalDataStatement,1))
+      #ADD(%LongVariable,%LocalData)
+    #ELSIF(INSTRING('DATE',%LocalDataStatement,1))
+      #ADD(%LongVariable,%LocalData)
+    #ELSIF(INSTRING('TIME',%LocalDataStatement,1))
+      #ADD(%LongVariable,%LocalData)
+    #ENDIF
+  #ENDFOR
+  #FOR(%GlobalData)
+    #IF(INSTRING('LONG',%GlobalDataStatement,1))
+      #ADD(%LongVariable,%GlobalData)
+    #ELSIF(INSTRING('DATE',%GlobalDataStatement,1))
+      #ADD(%LongVariable,%GlobalData)
+    #ELSIF(INSTRING('TIME',%GlobalDataStatement,1))
+      #ADD(%LongVariable,%GlobalData)
+    #ENDIF
+  #ENDFOR
+  #FOR(%File)
+    #FOR(%Field)
+      #CASE(%FieldType)
+      #OF('LONG')
+      #OROF('DATE')
+      #OROF('TIME')
+        #ADD(%LongVariable,%Field)
+      #ENDCASE
+    #ENDFOR
+  #ENDFOR
+#ENDPREPARE
+#BOXED('Devuna')
+  #INSERT (%Head)
+  #DISPLAY ('This template adds the DateTimePicker to the window.'),AT(10)
+  #DISPLAY ('Place and size a rectangle on the window to specify'),AT(10)
+  #DISPLAY ('the position of the control.'),AT(10)
+  #DISPLAY ('')
+  #BUTTON('Properties...'),AT(,,180)
+    #PROMPT('Control &Name',@S64),%InstancePrefix,REQ,DEFAULT('DateTime:' & %ActiveTemplateInstance)
+    #PROMPT('&AppCanParse',CHECK),%AppCanParse,DEFAULT(%False),AT(10)
+    #ENABLE(%AppCanParse=%True),CLEAR
+      #PROMPT('&Parse Function:',PROCEDURE),%UserNameNotificationFn
+    #ENDENABLE
+    #PROMPT('&Format',OPTION),%Format,DEFAULT(2),AT(10,,180),CHOICE
+      #PROMPT('Long Date',RADIO),AT(15)
+      #PROMPT('Short Date',RADIO),AT(15)
+      #PROMPT('Time',RADIO),AT(15)
+      #PROMPT('Custom',RADIO),AT(15)
+    #ENABLE(%Format=4)
+      #PROMPT('Custom &Format:',@S80),%CustomFormat
+    #ENDENABLE
+    #ENABLE(%Format <> 3),CLEAR
+      #PROMPT('&ShowNone',CHECK),%ShowNone,DEFAULT(%False),AT(10)
+      #PROMPT('&UpDown',CHECK),%UpDown,DEFAULT(%False),AT(10)
+      #ENABLE(%UpDown = %False),CLEAR
+        #PROMPT('&RightAlign',CHECK),%RightAlign,DEFAULT(%False),AT(10)
+      #ENDENABLE
+    #ENDENABLE
+    #PROMPT('&Visible',CHECK),%Visible,DEFAULT(%True),AT(10)
+    #PROMPT('&Focus',CHECK),%ControlGetsFocus,DEFAULT(%False),AT(10)
+    #DISPLAY ('')
+    #ENABLE(%Format<>3),CLEAR
+      #PROMPT('&Date Field:',COMBO(%LongVariable)),%DateValueField,AT(,,140)
+    #ENDENABLE
+    #ENABLE(%Format>2),CLEAR
+      #PROMPT('&Time Field:',COMBO(%LongVariable)),%TimeValueField,AT(,,140)
+    #ENDENABLE
+    #PROMPT('Change Notification &Event:',@S64),%ChangeNotificationEvent,DEFAULT('EVENT:USER'),AT(,,140)
+  #ENDBUTTON
+#ENDBOXED
+#!
+#!
+#ATSTART
+#DECLARE(%CustomFormatValue)
+#!
+#DECLARE(%Rectangle)
+#FOR(%Control),WHERE(%ControlInstance = %ActiveTemplateInstance)
+  #CASE(%ControlOriginal)
+  #OF('?DateTimePicker')
+    #SET(%Rectangle,%Control)
+  #ENDCASE
+#ENDFOR
+#!
+#ENDAT
+#!
+#!
+#AT(%DataSection)
+%[20]InstancePrefix DTPicker
+#ENDAT
+#!
+#!
+#AT(%SubClassClientWindowDataSection, %ActiveTemplateParentInstance),PRIORITY(5000),DESCRIPTION('DateTimePicker Control Data')
+  #IF(%UserNameNotificationFn)
+nmDateTimeString    LIKE(tagNMDATETIMESTRING)
+szUserString        CSTRING(81)
+lDateValue          LONG
+lTimeValue          LONG
+  #ENDIF
+#ENDAT
+#!
+#!
+#AT(%WindowManagerMethodCodeSection,'Kill','(),BYTE'),PRIORITY(900),DESCRIPTION('DateTimePicker Control: Kill')
+%InstancePrefix.Kill
+#ENDAT
+#!
+#!
+#AT(%WindowManagerMethodCodeSection,'TakeEvent','(),BYTE'),PRIORITY(6300),DESCRIPTION('DateTimePicker Control: Date Change')
+  %InstancePrefix.SetVisible(%Rectangle{PROP:Visible})
+  #IF(%ChangeNotificationEvent)
+  IF EVENT() = %ChangeNotificationEvent
+     %InstancePrefix.GetSelection(%DateValueField, %TimeValueField)
+  END
+  #ENDIF
+#ENDAT
+#!
+#!
+#AT(%WindowManagerMethodDataSection,'TakeWindowEvent','(),BYTE'),PRIORITY(8500),DESCRIPTION('DateTimePicker Control')
+  #IF(%Format=4)
+    #SET(%ValueConstruct,%InstancePrefix & ':szCustomFormat')
+%[20]ValueConstruct CSTRING(81)
+  #ENDIF
+#ENDAT
+#!
+#!
+#AT(%WindowEventHandling,'OpenWindow'),PRIORITY(5000),DESCRIPTION('DateTimePicker Control: OpenWindow')
+#PRIORITY(5100)
+%InstancePrefix.Init()
+#PRIORITY(5200)
+
+%InstancePrefix.SetEvent(%ChangeNotificationEvent)
+%InstancePrefix.SetAppCanParse(%AppCanParse)
+#CASE(%Format)
+#OF(1)
+%InstancePrefix.SetDisplayFormat(DTPLONGDATE)
+%InstancePrefix.SetShowNone(%ShowNone)
+%InstancePrefix.SetUpDown(%UpDown)
+%InstancePrefix.SetRightAlign(%RightAlign)
+#OF(2)
+%InstancePrefix.SetDisplayFormat(DTPSHORTDATE)
+%InstancePrefix.SetShowNone(%ShowNone)
+%InstancePrefix.SetUpDown(%UpDown)
+%InstancePrefix.SetRightAlign(%RightAlign)
+#OF(3)
+%InstancePrefix.SetDisplayFormat(DTPTIME)
+#OF(4)
+%InstancePrefix.SetDisplayFormat(DTPCUSTOM)
+  #SET(%ValueConstruct,%InstancePrefix & ':szCustomFormat')
+  #SET(%CustomFormatValue,'''' & QUOTE(%CustomFormat) & '''')
+%ValueConstruct = %CustomFormatValue
+%InstancePrefix.SetCustomFormat(%ValueConstruct)
+%InstancePrefix.SetShowNone(%ShowNone)
+%InstancePrefix.SetUpDown(%UpDown)
+%InstancePrefix.SetRightAlign(%RightAlign)
+#ENDCASE
+%InstancePrefix.SetVisible(%Visible)
+#PRIORITY(5300)
+
+0{PROP:Pixels}=1
+%InstancePrefix.CreateDTPicker(%Rectangle{PROP:Xpos},   |
+                               %Rectangle{PROP:Ypos},   |
+                               %Rectangle{PROP:Width},  |
+                               %Rectangle{PROP:Height}, |
+                               %Rectangle,%ControlGetsFocus)
+0{PROP:Pixels}=0
+#PRIORITY(5400)
+%InstancePrefix.SetSelection(%DateValueField,%TimeValueField)
+%InstancePrefix.SetMonthCalHwnd(ADDRESS(DTP:hwndMonthCal))
+#ENDAT
+#!
+#!
+#!
+#!

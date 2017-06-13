@@ -1,0 +1,1584 @@
+[APPLICATION]
+VERSION 34
+TODO ABC ToDo
+PROCEDURE Main
+[COMMON]
+FROM ABC
+MODIFIED '2011/04/26' '12:35:12'
+[PROMPTS]
+%ProgramAuthor DEFAULT  ('Randy Rogers')
+%MessageDescription LONG  (1)
+%GlobalExternal LONG  (0)
+%ExternalSource DEFAULT  ('Dynamic Link Library (DLL)')
+%GenerateEmbedComments LONG  (0)
+%INIActive LONG  (0)
+%INIFile DEFAULT  ('Program Name.INI')
+%ININame DEFAULT  ('')
+%PreserveVars MULTI LONG  ()
+%PreserveVar DEPEND %PreserveVars DEFAULT TIMES 0
+
+%EnableRunTimeTranslator LONG  (0)
+%DefaultGenerate LONG  (0)
+%DefaultRILogout LONG  (1)
+%GlobalUseDefaultFileManager LONG  (1)
+%GlobalFileManagerClass DEFAULT  ('')
+%GlobalUseDefaultRelationManager LONG  (1)
+%GlobalRelationManagerClass DEFAULT  ('')
+%LockRecoverTime DEFAULT  ('10')
+%DefaultThreaded DEFAULT  ('Use File Setting')
+%DefaultCreate DEFAULT  ('Use File Setting')
+%DefaultExternal DEFAULT  ('None External')
+%DefaultExternalSource DEFAULT  ('')
+%DefaultExternalAPP LONG  (0)
+%DefaultExport LONG  (0)
+%DefaultOpenMode DEFAULT  ('Share')
+%DefaultUserAccess DEFAULT  ('Read/Write')
+%DefaultOtherAccess DEFAULT  ('Deny None')
+%DefaultLazyOpen LONG  (1)
+%OverrideGenerate DEPEND %File LONG TIMES 0
+
+%OverrideRILogout DEPEND %File DEFAULT TIMES 1
+WHEN  ('') ('Use Default')
+
+%OverrideUseDefaultFileManager DEPEND %File LONG TIMES 0
+
+%OverrideFileManagerClass DEPEND %File DEFAULT TIMES 0
+
+%OverrideUseDefaultRelationManager DEPEND %File LONG TIMES 0
+
+%OverrideRelationManagerClass DEPEND %File DEFAULT TIMES 0
+
+%OverrideThreaded DEPEND %File DEFAULT TIMES 1
+WHEN  ('') ('Use Default')
+
+%OverrideCreate DEPEND %File DEFAULT TIMES 1
+WHEN  ('') ('Use Default')
+
+%OverrideExternal DEPEND %File DEFAULT TIMES 1
+WHEN  ('') ('Use Default')
+
+%OverrideExternalSource DEPEND %File DEFAULT TIMES 0
+
+%OverrideExternalAPP DEPEND %File LONG TIMES 0
+
+%OverrideExport DEPEND %File LONG TIMES 0
+
+%OverrideOpenMode DEPEND %File DEFAULT TIMES 1
+WHEN  ('') ('Use Default')
+
+%OverrideUserAccess DEPEND %File DEFAULT TIMES 1
+WHEN  ('') ('Use Default')
+
+%OverrideOtherAccess DEPEND %File DEFAULT TIMES 1
+WHEN  ('') ('Use Default')
+
+%OverrideLazyOpen DEPEND %File DEFAULT TIMES 1
+WHEN  ('') ('Use Default')
+
+%StandardExternalModule DEPEND %Module LONG TIMES 3
+WHEN  ('') (1)
+WHEN  ('dtpicker.clw') (1)
+WHEN  ('dtpicker001.clw') (1)
+
+%WindowManagerType DEFAULT  ('WindowManager')
+%ResetOnGainFocus LONG  (0)
+%AutoToolbar LONG  (1)
+%AutoRefresh LONG  (1)
+%ErrorManagerType DEFAULT  ('ErrorClass')
+%PopupClass DEFAULT  ('PopupClass')
+%SelectFileClass DEFAULT  ('SelectFileClass')
+%ResizerType DEFAULT  ('WindowResizeClass')
+%ResizerDeFaultFindParents LONG  (1)
+%ResizerDefaultOptimizeMoves LONG  (1)
+%ResizerDefaultOptimizeRedraws LONG  (1)
+%INIClass DEFAULT  ('INIClass')
+%RunTimeTranslatorType DEFAULT  ('TranslatorClass')
+%ExtractionFilename DEFAULT  ('')
+%TranslationGroups MULTI LONG  ()
+%TranslationFile DEPEND %TranslationGroups DEFAULT TIMES 0
+
+%TranslationGroup DEPEND %TranslationGroups DEFAULT TIMES 0
+
+%FileManagerType DEFAULT  ('FileManager')
+%ViewManagerType DEFAULT  ('ViewManager')
+%RelationManagerType DEFAULT  ('RelationManager')
+%BrowserType DEFAULT  ('BrowseClass')
+%ActiveInvisible LONG  (0)
+%AllowUnfilled LONG  (0)
+%RetainRow LONG  (1)
+%BrowseEIPManagerType DEFAULT  ('BrowseEIPManager')
+%EditInPlaceType DEFAULT  ('EditEntryClass')
+%StepManagerType DEFAULT  ('StepClass')
+%StepManagerLongType DEFAULT  ('StepLongClass')
+%StepManagerRealType DEFAULT  ('StepRealClass')
+%StepManagerStringType DEFAULT  ('StepStringClass')
+%StepManagerCustomType DEFAULT  ('StepCustomClass')
+%StepLocatorType DEFAULT  ('StepLocatorClass')
+%EntryLocatorType DEFAULT  ('EntryLocatorClass')
+%IncrementalLocatorType DEFAULT  ('IncrementalLocatorClass')
+%FilteredLocatorType DEFAULT  ('FilterLocatorClass')
+%FileDropManagerType DEFAULT  ('FileDropClass')
+%FileDropComboManagerType DEFAULT  ('FileDropComboClass')
+%QBEFormType DEFAULT  ('QueryFormClass')
+%QBEFormVisualType DEFAULT  ('QueryFormVisual')
+%QBEListType DEFAULT  ('QueryListClass')
+%QBEListVisualType DEFAULT  ('QueryListVisual')
+%ProcessType DEFAULT  ('ProcessClass')
+%PrintPreviewType DEFAULT  ('PrintPreviewClass')
+%ReportManagerType DEFAULT  ('ReportManager')
+%AsciiViewerClass DEFAULT  ('AsciiViewerClass')
+%AsciiSearchClass DEFAULT  ('AsciiSearchClass')
+%AsciiPrintClass DEFAULT  ('AsciiPrintClass')
+%AsciiFileManagerType DEFAULT  ('AsciiFileClass')
+%ToolbarClass DEFAULT  ('ToolbarClass')
+%ToolbarListBoxType DEFAULT  ('ToolbarListboxClass')
+%ToolbarRelTreeType DEFAULT  ('ToolbarReltreeClass')
+%ToolbarUpdateClassType DEFAULT  ('ToolbarUpdateClass')
+%ClassItem UNIQUE DEFAULT  ('ErrorManager', '', 'ErrorManager', 'ErrorStatusManager', |
+  'FileManager:', 'FuzzyMatcher', 'INIManager', 'RelationManager:', 'Translator')
+%DefaultBaseClassType DEPEND %ClassItem DEFAULT TIMES 5
+WHEN  ('ErrorManager') ('ErrorClass')
+WHEN  ('ErrorStatusManager') ('ErrorStatusClass')
+WHEN  ('FuzzyMatcher') ('FuzzyClass')
+WHEN  ('INIManager') ('INIClass')
+WHEN  ('Translator') ('TranslatorClass')
+
+%ActualDefaultBaseClassType DEPEND %ClassItem DEFAULT TIMES 5
+WHEN  ('ErrorManager') ('')
+WHEN  ('ErrorStatusManager') ('')
+WHEN  ('FuzzyMatcher') ('')
+WHEN  ('INIManager') ('')
+WHEN  ('Translator') ('')
+
+%ClassLines DEPEND %ClassItem MULTI DEFAULT TIMES 0
+
+%FuzzyMatchingEnabled LONG  (1)
+%IgnoreCase LONG  (1)
+%WordOnly LONG  (0)
+%WindowFrameDragging LONG  (1)
+%GlobalObject DEPEND %ClassItem DEFAULT TIMES 5
+WHEN  ('ErrorManager') ('YES')
+WHEN  ('ErrorStatusManager') ('YES')
+WHEN  ('FuzzyMatcher') ('YES')
+WHEN  ('INIManager') ('YES')
+WHEN  ('Translator') ('YES')
+
+%ThisObjectName DEPEND %ClassItem DEFAULT TIMES 5
+WHEN  ('ErrorManager') ('GlobalErrors')
+WHEN  ('ErrorStatusManager') ('GlobalErrorsStatus')
+WHEN  ('FuzzyMatcher') ('FuzzyMatcher')
+WHEN  ('INIManager') ('INIMgr')
+WHEN  ('Translator') ('Translator')
+
+%UseDefaultABCBaseClass DEPEND %ClassItem LONG TIMES 5
+WHEN  ('ErrorManager') (1)
+WHEN  ('ErrorStatusManager') (1)
+WHEN  ('FuzzyMatcher') (1)
+WHEN  ('INIManager') (1)
+WHEN  ('Translator') (1)
+
+%UseABCBaseClass DEPEND %ClassItem LONG TIMES 5
+WHEN  ('ErrorManager') (1)
+WHEN  ('ErrorStatusManager') (1)
+WHEN  ('FuzzyMatcher') (1)
+WHEN  ('INIManager') (1)
+WHEN  ('Translator') (1)
+
+%ABCBaseClass DEPEND %ClassItem DEFAULT TIMES 5
+WHEN  ('ErrorManager') ('')
+WHEN  ('ErrorStatusManager') ('')
+WHEN  ('FuzzyMatcher') ('AStringValue')
+WHEN  ('INIManager') ('AStringValue')
+WHEN  ('Translator') ('AStringValue')
+
+%ExtBaseClass DEPEND %ClassItem DEFAULT TIMES 0
+
+%BaseClassIncludeFile DEPEND %ClassItem DEFAULT TIMES 0
+
+%DeriveFromBaseClass DEPEND %ClassItem LONG TIMES 5
+WHEN  ('ErrorManager') (0)
+WHEN  ('ErrorStatusManager') (0)
+WHEN  ('FuzzyMatcher') (0)
+WHEN  ('INIManager') (0)
+WHEN  ('Translator') (0)
+
+%NewMethods DEPEND %ClassItem MULTI LONG TIMES 0
+
+%NewMethodName DEPEND %NewMethods DEFAULT TIMES 0
+
+%NewMethodPrototype DEPEND %NewMethods DEFAULT TIMES 0
+
+%NewClassPropertyItems DEPEND %ClassItem MULTI LONG TIMES 0
+
+%NewClassProperty DEPEND %NewClassPropertyItems DEFAULT TIMES 0
+
+%NewClassDataType DEPEND %NewClassPropertyItems DEFAULT TIMES 2
+WHEN  ('FuzzyMatcher')TIMES 0
+WHEN  ('INIManager')TIMES 0
+
+%NewClassOtherType DEPEND %NewClassPropertyItems DEFAULT TIMES 0
+
+%NewClassDataIsRef DEPEND %NewClassPropertyItems LONG TIMES 0
+
+%NewClassDataSize DEPEND %NewClassPropertyItems DEFAULT TIMES 0
+
+%NewClassDataDim1 DEPEND %NewClassPropertyItems DEFAULT TIMES 0
+
+%NewClassDataDim2 DEPEND %NewClassPropertyItems DEFAULT TIMES 0
+
+%NewClassDataDim3 DEPEND %NewClassPropertyItems DEFAULT TIMES 0
+
+%NewClassDataDim4 DEPEND %NewClassPropertyItems DEFAULT TIMES 0
+
+%ClassMethods DEPEND %ClassItem MULTI LONG TIMES 0
+
+%ClassMethodName DEPEND %ClassMethods DEFAULT TIMES 0
+
+%ClassMethodPrototype DEPEND %ClassMethods DEFAULT TIMES 0
+
+%ClassPropertyItems DEPEND %ClassItem MULTI LONG TIMES 0
+
+%ClassProperty DEPEND %ClassPropertyItems DEFAULT TIMES 0
+
+%ClassDataType DEPEND %ClassPropertyItems DEFAULT TIMES 2
+WHEN  ('FuzzyMatcher')TIMES 0
+WHEN  ('INIManager')TIMES 0
+
+%ClassOtherType DEPEND %ClassPropertyItems DEFAULT TIMES 0
+
+%ClassDataIsRef DEPEND %ClassPropertyItems LONG TIMES 0
+
+%ClassDataSize DEPEND %ClassPropertyItems DEFAULT TIMES 0
+
+%ClassDataDim1 DEPEND %ClassPropertyItems DEFAULT TIMES 0
+
+%ClassDataDim2 DEPEND %ClassPropertyItems DEFAULT TIMES 0
+
+%ClassDataDim3 DEPEND %ClassPropertyItems DEFAULT TIMES 0
+
+%ClassDataDim4 DEPEND %ClassPropertyItems DEFAULT TIMES 0
+
+%FileDeclarationMode DEPEND %File DEFAULT TIMES 1
+WHEN  ('') ('Use User Options')
+
+%FileDeclarationThread DEPEND %File LONG TIMES 1
+WHEN  ('') (0)
+
+%FileDeclarationBindable DEPEND %File LONG TIMES 1
+WHEN  ('') (1)
+
+%FileDeclarationName DEPEND %File DEFAULT TIMES 0
+
+%FileDeclarationOver DEPEND %File DEFAULT TIMES 0
+
+%FileDeclarationType DEPEND %File LONG TIMES 1
+WHEN  ('') (0)
+
+%NoGenerateGlobals LONG  (0)
+%ImageClass DEFAULT  ('ImageManager')
+%DefaultErrorCategory DEFAULT  ('ABC')
+%StoreErrorHistory LONG  (0)
+%LimitStoredHistory LONG  (0)
+%ErrorHistoryThreshold DEFAULT  ('300')
+%HistoryViewTrigger DEFAULT  ('Level:Fatal')
+%FuzzyMatcherClass DEFAULT  ('FuzzyClass')
+%GridClass DEFAULT  ('GridClass')
+%SidebarClass DEFAULT  ('SidebarClass')
+%OverrideAbcSettings LONG  (0)
+%AbcSourceLocation DEFAULT  ('LINK')
+%AbcLibraryName DEFAULT  ('')
+%INIType DEFAULT  ('NVD_INI')
+%REGRoot DEFAULT  ('REG_CLASSES_ROOT')
+%WindowEnableEnhanceFocus LONG  (0)
+%SelectedText LONG  (1)
+%SelectedRadio LONG  (1)
+%SelectedSpin LONG  (1)
+%SelectedCheck LONG  (1)
+%SelectedDropList LONG  (1)
+%SelectedDisplayChangeColor LONG  (1)
+%SelectedColor LONG  (65535)
+%SelectedStyle LONG  (1)
+%ExcludeSelectedDropList LONG  (1)
+%SelectedRequired LONG  (0)
+%SelectedRequiredColor LONG  (65535)
+%SelectedDisplayBox LONG  (1)
+%SelectedDisplayBoxFillColor LONG  (65535)
+%SelectedDisplayBoxBorderColor LONG  (0)
+%SelectedDisplayBoxBorderSize DEFAULT  ('2')
+%SelectedRequiredBox LONG  (0)
+%SelectedRequiredDisplayBoxFillColor LONG  (255)
+%SelectedRequiredDisplayBoxBorderColor LONG  (0)
+%SelectedCaret LONG  (1)
+%SelectedCaretColor LONG  (8421504)
+%SelectedCaretCharacter DEFAULT  ('»')
+%SelectedCaretCharacterSeparation DEFAULT  ('8')
+%GlobalUseEnterInsteadTab LONG  (0)
+%GlobalUseEnterInsteadTabExclude MULTI DEFAULT  ()
+%GlobalUseEnterInsteadTabEnable DEFAULT  ('Enable')
+%GlobalUseEnterInsteadTabEnableValue DEFAULT  ('True')
+%GlobalEnableAutoSizeColumn LONG  (0)
+%GlobalEnableListFormatManager LONG  (0)
+%GlobalUserFieldListFormatManager DEFAULT  ('1')
+%TableOrigin DEFAULT  ('Application')
+%FileEquate DEFAULT  ('LFM_CFile')
+%ConfigFilePRE DEFAULT  ('CFG')
+%ConfigFileOEM LONG  (0)
+%ConfigFileTHREAD LONG  (1)
+%ConfigFileENCRYPT LONG  (0)
+%ConfigFilePASSWORD DEFAULT  ('')
+%FormatNameSize DEFAULT  ('30')
+%FormatBufferSize DEFAULT  ('5120')
+%VariableBufferSize DEFAULT  ('2048')
+%ConfigFilePath DEFAULT  ('')
+%UseConfigFileName DEFAULT  ('Default')
+%ConfigFileNAME DEFAULT  ('Formats.FDB')
+%ColonCounter DEFAULT  ('')
+%WrongSymbol DEFAULT  ('')
+%DictionaryTableOrigin FILE  ()
+%CalendarManagerType DEFAULT  ('CalendarClass')
+%GlobalChangeColor LONG  (0)
+%GlobalColorSunday LONG  (255)
+%GlobalColorSaturday LONG  (255)
+%GlobalColorHoliday LONG  (32768)
+%GlobalColorOther LONG  (0)
+%GlobalSelectOnClose DEFAULT  ('Select')
+%GlobalUseABCClasess LONG  (1)
+%AppTemplateFamily DEFAULT  ('ABC')
+%CWTemplateVersion DEFAULT  ('v10.0')
+%ABCVersion DEFAULT  ('10000')
+%UseDefaultXPManifest LONG  (0)
+%FormVCRManagerType DEFAULT  ('FormVCRClass')
+%ToolbarFormVCRType DEFAULT  ('ToolbarFormVCRClass')
+%ProgramIcon DEFAULT  ('dtpicker.ico')
+%INIInAppDirectory LONG  (1)
+%DisableINISaveWindow LONG  (0)
+%GlobalEnableRebase LONG  (0)
+%RBDMethod DEFAULT  ('Specify manually')
+%RBDImageBase DEFAULT  ('10000000')
+%EditInPlaceInterface DEFAULT  ('Original')
+%EditInPlaceEntryType DEFAULT  ('EditEntryClass')
+%EditInPlaceTextType DEFAULT  ('EditTextClass')
+%EditInPlaceCheckType DEFAULT  ('EditCheckClass')
+%EditInPlaceSpinType DEFAULT  ('EditSpinClass')
+%EditInPlaceDropListType DEFAULT  ('EditDropListClass')
+%EditInPlaceDropComboType DEFAULT  ('EditDropComboClass')
+%EditInPlaceColorType DEFAULT  ('EditColorClass')
+%EditInPlaceFileType DEFAULT  ('EditFileClass')
+%EditInPlaceFontType DEFAULT  ('EditFontClass')
+%EditInPlaceMultiSelectType DEFAULT  ('EditMultiSelectClass')
+%EditInPlaceCalendarType DEFAULT  ('EditCalendarClass')
+%EditInPlaceLookupType DEFAULT  ('EditLookupClass')
+%EditInPlaceOtherType DEFAULT  ('EditEntryClass')
+%ReportTargetSelectorManagerType DEFAULT  ('ReportTargetSelectorClass')
+%BreakManagerType DEFAULT  ('BreakManagerClass')
+%GlobalLFMSortOrderMenuText DEFAULT  ('SortOrder')
+%DefaultLocalExternal LONG  (0)
+%OverrideLocalExternal DEPEND %File LONG TIMES 0
+
+%ErrorStatusManagerType DEFAULT  ('ErrorStatusClass')
+%AllowSelectCopy LONG  (0)
+%SelectedList LONG  (1)
+%INIProgramIniLocation DEFAULT  ('APPDIR')
+%INICSIDLDirectory DEFAULT  ('SV:CSIDL_PERSONAL')
+%CSIDLCompanyDir DEFAULT  ('')
+%CSIDLProductDir DEFAULT  ('')
+%CSIDLCreate LONG  (0)
+%EnableExceptionMessage LONG  (0)
+%GenerateXPManifest LONG  (1)
+%LinkGenerateXPManifest LONG  (1)
+%AddVistaXPManifest LONG  (1)
+%VistaManifestExecutionLevel DEFAULT  ('asInvoker')
+%VistaManifestUIAccess LONG  (0)
+%W7ManifestVista LONG  (0)
+%W7ManifestW7 LONG  (1)
+%ForceMakeTransparentXPManifest LONG  (1)
+%ExtUIXPMenuEnableGlobal LONG  (0)
+%ExtUIXPMenuColorTypeGlobal DEFAULT  ('OFF')
+%ExtUIXPMenuDisableImageBar LONG  (1)
+%ExtUIXPMenuEnableRuntime LONG  (0)
+%ExtUIXPMenuRuntimeVar DEFAULT  ('')
+%ExtUIXPMenuColorLeftGlobal LONG  (15920364)
+%ExtUIXPMenuColorRightGlobal LONG  (12560039)
+%ExtUIXPMenuColorSelectionBarLeftGlobal LONG  (15920364)
+%ExtUIXPMenuColorSelectionBarRightGlobal LONG  (15920364)
+%ExtUIXPMenuSelVertical LONG  (1)
+%ExtUIXPMenuColorSelectionBorderGlobal LONG  (15920364)
+%ExtUIXPMenuColorHotLeftGlobal LONG  (15920364)
+%ExtUIXPMenuColorHotRightGlobal LONG  (15920364)
+%ExtUIXPMenuColorSelectedLeftGlobal LONG  (15920364)
+%ExtUIXPMenuColorSelectedRightGlobal LONG  (15920364)
+%ExtUIXPMenuColorNormalBarLeftGlobal LONG  (15920364)
+%ExtUIXPMenuColorNormalBarRightGlobal LONG  (15920364)
+%ExtUIXPMenuColorItemBackgroundGlobal LONG  (-2147483644)
+%ExtUIXPMenuColorNormalText LONG  (0)
+%ExtUIXPMenuColorSelectedText LONG  (0)
+%ExtUIXPMenuColorHotText LONG  (0)
+%ExtUIXPMenuFlat LONG  (1)
+%ExtUIXPMenuShowImageBar LONG  (0)
+%ExtUIXPMenuSeparator3D LONG  (1)
+%ExtUIXPMenuSeparatorFull LONG  (0)
+%ExtUIXPMenuVerticalLine LONG  (1)
+%ExtUIMDITabGlobal DEFAULT  ('DISABLE')
+%ExtUIMDITabStyleGlobal DEFAULT  ('Default')
+%ExtUITabStyleGlobal DEFAULT  ('Default')
+%GlobalInterLine DEFAULT  ('0')
+%GeneratePropDataPath LONG  (0)
+%PropDataPathLocation DEFAULT  ('CSIDLLIKEINI')
+%DataPathCSIDLDirectory DEFAULT  ('SV:CSIDL_PERSONAL')
+%DataPathCSIDLCompanyDir DEFAULT  ('')
+%DataPathCSIDLProductDir DEFAULT  ('')
+%DataPathCSIDLCreate LONG  (0)
+%DataPathOtherDirectory DEFAULT  ('')
+%DataPathOtherDirectoryCreate LONG  (0)
+%ButtonMarginsCompatibility LONG  (0)
+%NoThemedControlsDependency LONG  (0)
+%W7ManifestW8 LONG  (1)
+%ForceMakeColorXPManifest LONG  (0)
+%ForceSHEETNoTheme LONG  (0)
+%VistaManifestDependentAssembly MULTI LONG  ()
+%VistaManifestDependentAssemblyName DEPEND %VistaManifestDependentAssembly DEFAULT TIMES 0
+
+%VistaManifestDependentAssemblyVersion DEPEND %VistaManifestDependentAssembly DEFAULT TIMES 0
+
+%VistaManifestDependentAssemblyType DEPEND %VistaManifestDependentAssembly DEFAULT TIMES 0
+
+%VistaManifestDependentAssemblyPublicKeyToken DEPEND %VistaManifestDependentAssembly DEFAULT TIMES 0
+
+%VistaManifestDependentAssemblyLanguage DEPEND %VistaManifestDependentAssembly DEFAULT TIMES 0
+
+%VistaManifestDependentAssemblyProcessorArchitecture DEPEND %VistaManifestDependentAssembly LONG TIMES 0
+
+%W7ManifestW81 LONG  (1)
+%EnableOSK DEFAULT  ('OFF')
+%VistaManifestdpiAware LONG  (1)
+%W7ManifestW10 LONG  (1)
+%OverrideDoNotAssertOnCloseMisuse DEPEND %File LONG TIMES 1
+WHEN  ('') (0)
+
+[ADDITION]
+NAME KCR_DateTimePicker KCR_DateTimePickerClass
+[INSTANCE]
+INSTANCE 4
+[PROMPTS]
+%TplName DEFAULT  ('KCR_DateTimePickerClass (Devuna)')
+%TplDescription DEFAULT  ('Add DateTimePicker Class to Application')
+%callWindowProc LONG  (1)
+%lstrlenW LONG  (1)
+%memcpy LONG  (1)
+%strcpy LONG  (1)
+%widecharToMultibyte LONG  (1)
+%destroyWindow LONG  (1)
+%getParent LONG  (1)
+%postMessage LONG  (1)
+%sendMessage LONG  (1)
+%setWindowLong LONG  (1)
+%getWindowLong LONG  (1)
+[ADDITION]
+NAME GenTXA GenerateTXA
+[INSTANCE]
+INSTANCE 1
+[PROMPTS]
+%GenAPP LONG  (0)
+%GenDCTX LONG  (0)
+%GenAPPSLG LONG  (1)
+[PERSIST]
+%SaveCreateLocalMap DEFAULT  ('1')
+%GenerationCompleted DEPEND %Module DEFAULT TIMES 2
+WHEN  ('dtpicker.clw') ('1')
+WHEN  ('dtpicker001.clw') ('1')
+
+%LastTarget32 DEFAULT  ('1')
+%LastProgramExtension DEFAULT  ('EXE')
+%LastApplicationDebug DEFAULT  ('')
+%LastApplicationLocalLibrary DEFAULT  ('1')
+[PROJECT]
+#noedit
+#system win32 exe
+#model clarion lib
+#set RELEASE = on
+#compile "dtpicker.clw" -- GENERATED
+#compile "dtpicker001.clw" -- GENERATED
+#link "dtpicker.EXE"
+[PROGRAM]
+[COMMON]
+FROM ABC ABC
+MODIFIED '2017/06/13' '18:09:31'
+[EMBED]
+EMBED %BeforeGlobalIncludes
+[DEFINITION]
+[SOURCE]
+PROPERTY:BEGIN
+PRIORITY 3600
+PROPERTY:END
+!region Copyright and License
+! ================================================================================
+! Notice : Copyright (C) 2017, Devuna
+!          Distributed under LGPLv3 (http://www.gnu.org/licenses/lgpl.html)
+!
+!    This file is part of Devuna-DateTimePicker (https://github.com/Devuna/Devuna-DateTimePicker)
+!
+!    Devuna-DateTimePicker is free software: you can redistribute it and/or modify
+!    it under the terms of the GNU General Public License as published by
+!    the Free Software Foundation, either version 3 of the License, or
+!    (at your option) any later version.
+!
+!    Devuna-DateTimePicker is distributed in the hope that it will be useful,
+!    but WITHOUT ANY WARRANTY; without even the implied warranty of
+!    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+!    GNU General Public License for more details.
+!
+!    You should have received a copy of the GNU General Public License
+!    along with this file.  If not, see <http://www.gnu.org/licenses/>.
+! ================================================================================
+!endRegion
+[SOURCE]
+PROPERTY:BEGIN
+PRIORITY 4000
+PROPERTY:END
+    ITEMIZE(EVENT:USER),PRE(EVENT)
+DatePickerChanged EQUATE
+TimePickerChanged EQUATE
+    END
+[END]
+[END]
+[END]
+[MODULE]
+[COMMON]
+FROM ABC GENERATED
+MODIFIED '2017/06/13' '18:09:49'
+[EMBED]
+EMBED %StartOfModule
+[DEFINITION]
+[SOURCE]
+PROPERTY:BEGIN
+PRIORITY 4000
+PROPERTY:END
+!region Copyright and License
+! ================================================================================
+! Notice : Copyright (C) 2017, Devuna
+!          Distributed under LGPLv3 (http://www.gnu.org/licenses/lgpl.html)
+!
+!    This file is part of Devuna-DateTimePicker (https://github.com/Devuna/Devuna-DateTimePicker)
+!
+!    Devuna-DateTimePicker is free software: you can redistribute it and/or modify
+!    it under the terms of the GNU General Public License as published by
+!    the Free Software Foundation, either version 3 of the License, or
+!    (at your option) any later version.
+!
+!    Devuna-DateTimePicker is distributed in the hope that it will be useful,
+!    but WITHOUT ANY WARRANTY; without even the implied warranty of
+!    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+!    GNU General Public License for more details.
+!
+!    You should have received a copy of the GNU General Public License
+!    along with this file.  If not, see <http://www.gnu.org/licenses/>.
+! ================================================================================
+!endRegion
+[END]
+[END]
+[PROCEDURE]
+NAME Main
+[COMMON]
+FROM ABC Window
+MODIFIED '2017/06/13' '18:12:47'
+[DATA]
+[SCREENCONTROLS]
+! PROMPT('Files Opened:'),USE(?FilesOpened:Prompt)
+! ENTRY(@n3),USE(FilesOpened)
+[REPORTCONTROLS]
+! STRING(@n3),USE(FilesOpened)
+FilesOpened              BYTE
+!!> GUID('b541ec82-59db-43cd-a36e-e5d9e55cfd84'),PROMPT('Files Opened:'),HEADER('Files Opened'),PICTURE(@n3)
+[SCREENCONTROLS]
+! ENTRY(@n-14),USE(lDateValue)
+[REPORTCONTROLS]
+! STRING(@n-14),USE(lDateValue)
+lDateValue               LONG
+!!> GUID('dbda1868-d583-4152-a67f-0a070d08c4cc'),PROMPT('l Date Value:'),HEADER('l Date Value'),PICTURE(@n-14)
+[SCREENCONTROLS]
+! ENTRY(@n-14),USE(lTimeValue)
+[REPORTCONTROLS]
+! STRING(@n-14),USE(lTimeValue)
+lTimeValue               LONG
+!!> GUID('74fa0967-6797-4b2b-aba8-5a9e9ecd8076'),PROMPT('l Time Value:'),HEADER('l Time Value'),PICTURE(@n-14)
+[SCREENCONTROLS]
+! PROMPT('b Up Down:'),USE(?bCalendarStyle:Prompt)
+! ENTRY(@n3),USE(bCalendarStyle)
+[REPORTCONTROLS]
+! STRING(@n3),USE(bCalendarStyle)
+bCalendarStyle           BYTE
+!!> GUID('aec8d2f5-7f5c-4e3e-9f34-e9b561ddd6f3'),INITIAL('0'),PROMPT('b Up Down:'),HEADER('b Up Down'),PICTURE(@n3)
+[SCREENCONTROLS]
+! PROMPT('sz Font Name:'),USE(?szFontName:Prompt)
+! ENTRY(@s63),USE(szFontName)
+[REPORTCONTROLS]
+! STRING(@s63),USE(szFontName)
+szFontName               CSTRING(64)
+!!> GUID('d5a585b9-f759-42c5-8b77-a93d53d059b7'),PROMPT('sz Font Name:'),HEADER('sz Font Name'),PICTURE(@s63)
+[SCREENCONTROLS]
+! PROMPT('Use Check Box:'),USE(?bCheckBox:Prompt)
+! ENTRY(@n3),USE(bCheckBox)
+[REPORTCONTROLS]
+! STRING(@n3),USE(bCheckBox)
+bCheckBox                BYTE
+!!> GUID('1ba7a8d0-dcc6-4a88-b8ad-1b0223799e92'),INITIAL('0'),PROMPT('Use Check Box:'),HEADER('Use Check Box'),PICTURE(@n3)
+[SCREENCONTROLS]
+! ENTRY(@n-14),USE(lBackgroundColor)
+[REPORTCONTROLS]
+! STRING(@n-14),USE(lBackgroundColor)
+lBackgroundColor         LONG
+!!> GUID('c92c6b78-9f4f-47a8-85a5-060a873dd602'),PROMPT('l Background Color:'),HEADER('l Background Color'),PICTURE(@n-14)
+[SCREENCONTROLS]
+! PROMPT('Background'),USE(?lCalendarBackColor:Prompt)
+! ENTRY(@n-14),USE(lCalendarBackColor)
+[REPORTCONTROLS]
+! STRING(@n-14),USE(lCalendarBackColor)
+lCalendarBackColor       LONG
+!!> GUID('ea889607-11c8-461e-9137-4c8d1a1311b3'),PROMPT('Background'),PICTURE(@n-14)
+[SCREENCONTROLS]
+! ENTRY(@n-14),USE(lCalendarForeColor)
+[REPORTCONTROLS]
+! STRING(@n-14),USE(lCalendarForeColor)
+lCalendarForeColor       LONG
+!!> GUID('e6f83f6b-a117-417a-98be-eb914b6f3a1c'),PICTURE(@n-14)
+[SCREENCONTROLS]
+! ENTRY(@n-14),USE(lCalendarTitleBackColor)
+[REPORTCONTROLS]
+! STRING(@n-14),USE(lCalendarTitleBackColor)
+lCalendarTitleBackColor  LONG
+!!> GUID('fea32eda-bf36-40a5-a4c6-5d9f60da4f88'),PICTURE(@n-14)
+[SCREENCONTROLS]
+! ENTRY(@n-14),USE(lCalendarTitleForeColor)
+[REPORTCONTROLS]
+! STRING(@n-14),USE(lCalendarTitleForeColor)
+lCalendarTitleForeColor  LONG
+!!> GUID('d35a8f8c-8d9e-4cc1-9d2d-71c86115c658'),PICTURE(@n-14)
+[SCREENCONTROLS]
+! ENTRY(@n-14),USE(lCalendarTrailingForeColor)
+[REPORTCONTROLS]
+! STRING(@n-14),USE(lCalendarTrailingForeColor)
+lCalendarTrailingForeColor LONG
+!!> GUID('d77c6c3e-a360-41e9-adc9-8ac4a32b88b2'),PICTURE(@n-14)
+[SCREENCONTROLS]
+! ENTRY(@s32),USE(szTypeface)
+[REPORTCONTROLS]
+! STRING(@s32),USE(szTypeface)
+szTypeface               CSTRING(33)
+!!> GUID('0dd9d8af-69f0-47f8-a78b-03c3287ffa79'),PROMPT('sz Typeface:'),HEADER('sz Typeface'),PICTURE(@s32)
+[SCREENCONTROLS]
+! ENTRY(@n-14),USE(lFontSize)
+[REPORTCONTROLS]
+! STRING(@n-14),USE(lFontSize)
+lFontSize                LONG
+!!> GUID('be4c5e59-10cd-4934-80a6-4ed504d5cd89'),PICTURE(@n-14)
+[SCREENCONTROLS]
+! ENTRY(@n-14),USE(lFontStyle)
+[REPORTCONTROLS]
+! STRING(@n-14),USE(lFontStyle)
+lFontStyle               LONG
+!!> GUID('3f24317e-6727-4422-8488-e38d1c73ade4'),PICTURE(@n-14)
+[PROMPTS]
+%ClassItem UNIQUE DEFAULT  ('Default', '', 'Default', 'WindowToolbar')
+%DefaultBaseClassType DEPEND %ClassItem DEFAULT TIMES 2
+WHEN  ('Default') ('WindowManager')
+WHEN  ('WindowToolbar') ('ToolbarClass')
+
+%ActualDefaultBaseClassType DEPEND %ClassItem DEFAULT TIMES 2
+WHEN  ('Default') ('')
+WHEN  ('WindowToolbar') ('')
+
+%ClassLines DEPEND %ClassItem MULTI DEFAULT TIMES 1
+WHEN  ('Default') ('Ask {20}PROCEDURE(),DERIVED', 'ChangeAction {11}PROCEDURE(),BYTE,DERIVED', |
+  'Open {19}PROCEDURE(),DERIVED', 'PrimeUpdate {12}PROCEDURE(),BYTE,PROC,DERIVED', |
+  'Reset {18}PROCEDURE(BYTE Force=0),DERIVED', 'Run {20}PROCEDURE(),BYTE,PROC,DERIVED', |
+  'SetAlerts {14}PROCEDURE(),DERIVED', 'TakeAccepted {11}PROCEDURE(),BYTE,PROC,DERIVED', |
+  'TakeDisableButton      PROCEDURE(SIGNED Control,BYTE MakeDisable),DERIVED', 'TakeEvent {14}PROCEDURE(),BYTE,PROC,DERIVED', |
+  'Update {17}PROCEDURE(),DERIVED')
+
+%ReturnValue FIELD  ()
+%WindowOperationMode DEFAULT  ('Use WINDOW setting')
+%INISaveWindow LONG  (1)
+%ThisObjectName DEPEND %ClassItem DEFAULT TIMES 2
+WHEN  ('Default') ('ThisWindow')
+WHEN  ('WindowToolbar') ('Toolbar')
+
+%UseDefaultABCBaseClass DEPEND %ClassItem LONG TIMES 2
+WHEN  ('Default') (1)
+WHEN  ('WindowToolbar') (1)
+
+%UseABCBaseClass DEPEND %ClassItem LONG TIMES 2
+WHEN  ('Default') (1)
+WHEN  ('WindowToolbar') (1)
+
+%ABCBaseClass DEPEND %ClassItem DEFAULT TIMES 2
+WHEN  ('Default') ('AsciiFileClass')
+WHEN  ('WindowToolbar') ('AsciiFileClass')
+
+%ExtBaseClass DEPEND %ClassItem DEFAULT TIMES 0
+
+%BaseClassIncludeFile DEPEND %ClassItem DEFAULT TIMES 0
+
+%DeriveFromBaseClass DEPEND %ClassItem LONG TIMES 2
+WHEN  ('Default') (0)
+WHEN  ('WindowToolbar') (0)
+
+%NewMethods DEPEND %ClassItem MULTI LONG TIMES 0
+
+%NewMethodName DEPEND %NewMethods DEFAULT TIMES 0
+
+%NewMethodPrototype DEPEND %NewMethods DEFAULT TIMES 0
+
+%NewClassPropertyItems DEPEND %ClassItem MULTI LONG TIMES 0
+
+%NewClassProperty DEPEND %NewClassPropertyItems DEFAULT TIMES 0
+
+%NewClassDataType DEPEND %NewClassPropertyItems DEFAULT TIMES 1
+WHEN  ('WindowToolbar')TIMES 0
+
+%NewClassOtherType DEPEND %NewClassPropertyItems DEFAULT TIMES 0
+
+%NewClassDataIsRef DEPEND %NewClassPropertyItems LONG TIMES 0
+
+%NewClassDataSize DEPEND %NewClassPropertyItems DEFAULT TIMES 0
+
+%NewClassDataDim1 DEPEND %NewClassPropertyItems DEFAULT TIMES 0
+
+%NewClassDataDim2 DEPEND %NewClassPropertyItems DEFAULT TIMES 0
+
+%NewClassDataDim3 DEPEND %NewClassPropertyItems DEFAULT TIMES 0
+
+%NewClassDataDim4 DEPEND %NewClassPropertyItems DEFAULT TIMES 0
+
+%ClassMethods DEPEND %ClassItem MULTI LONG TIMES 0
+
+%ClassMethodName DEPEND %ClassMethods DEFAULT TIMES 0
+
+%ClassMethodPrototype DEPEND %ClassMethods DEFAULT TIMES 0
+
+%ClassPropertyItems DEPEND %ClassItem MULTI LONG TIMES 0
+
+%ClassProperty DEPEND %ClassPropertyItems DEFAULT TIMES 0
+
+%ClassDataType DEPEND %ClassPropertyItems DEFAULT TIMES 1
+WHEN  ('WindowToolbar')TIMES 0
+
+%ClassOtherType DEPEND %ClassPropertyItems DEFAULT TIMES 0
+
+%ClassDataIsRef DEPEND %ClassPropertyItems LONG TIMES 0
+
+%ClassDataSize DEPEND %ClassPropertyItems DEFAULT TIMES 0
+
+%ClassDataDim1 DEPEND %ClassPropertyItems DEFAULT TIMES 0
+
+%ClassDataDim2 DEPEND %ClassPropertyItems DEFAULT TIMES 0
+
+%ClassDataDim3 DEPEND %ClassPropertyItems DEFAULT TIMES 0
+
+%ClassDataDim4 DEPEND %ClassPropertyItems DEFAULT TIMES 0
+
+%ButtonAction DEPEND %Control DEFAULT TIMES 17
+WHEN  ('?CalendarStyle:Radio1') ('No Special Action')
+WHEN  ('?CalendarStyle:Radio2') ('No Special Action')
+WHEN  ('?Close') ('No Special Action')
+WHEN  ('?ColorsTab') ('No Special Action')
+WHEN  ('?DateTimePicker') ('No Special Action')
+WHEN  ('?DateTimePicker:2') ('No Special Action')
+WHEN  ('?FontButton') ('No Special Action')
+WHEN  ('?Panel1') ('No Special Action')
+WHEN  ('?Prompt1') ('No Special Action')
+WHEN  ('?Sheet1') ('No Special Action')
+WHEN  ('?String1') ('No Special Action')
+WHEN  ('?String5') ('No Special Action')
+WHEN  ('?StylesTab') ('No Special Action')
+WHEN  ('?bCalendarStyle') ('No Special Action')
+WHEN  ('?bCheckBox') ('No Special Action')
+WHEN  ('?lBackgroundColor') ('No Special Action')
+WHEN  ('?lBackgroundColorBox') ('No Special Action')
+
+%ButtonRunName DEPEND %Control DEFAULT TIMES 2
+WHEN  ('?Close') ('')
+WHEN  ('?FontButton') ('')
+
+%ButtonRunParameters DEPEND %Control DEFAULT TIMES 2
+WHEN  ('?Close') ('')
+WHEN  ('?FontButton') ('')
+
+%ButtonProcedure DEPEND %Control PROCEDURE TIMES 2
+WHEN  ('?Close') ()
+WHEN  ('?FontButton') ()
+
+%ButtonThread DEPEND %Control LONG TIMES 2
+WHEN  ('?Close') (0)
+WHEN  ('?FontButton') (0)
+
+%ButtonThreadStack DEPEND %Control DEFAULT TIMES 17
+WHEN  ('?CalendarStyle:Radio1') ('25000')
+WHEN  ('?CalendarStyle:Radio2') ('25000')
+WHEN  ('?Close') ('25000')
+WHEN  ('?ColorsTab') ('25000')
+WHEN  ('?DateTimePicker') ('25000')
+WHEN  ('?DateTimePicker:2') ('25000')
+WHEN  ('?FontButton') ('25000')
+WHEN  ('?Panel1') ('25000')
+WHEN  ('?Prompt1') ('25000')
+WHEN  ('?Sheet1') ('25000')
+WHEN  ('?String1') ('25000')
+WHEN  ('?String5') ('25000')
+WHEN  ('?StylesTab') ('25000')
+WHEN  ('?bCalendarStyle') ('25000')
+WHEN  ('?bCheckBox') ('25000')
+WHEN  ('?lBackgroundColor') ('25000')
+WHEN  ('?lBackgroundColorBox') ('25000')
+
+%ButtonParameters DEPEND %Control DEFAULT TIMES 2
+WHEN  ('?Close') ('')
+WHEN  ('?FontButton') ('')
+
+%ButtonReturnValueAssignment DEPEND %Control FIELD TIMES 2
+WHEN  ('?Close') ()
+WHEN  ('?FontButton') ()
+
+%ButtonReturnValueReferenceAssign DEPEND %Control LONG TIMES 2
+WHEN  ('?Close') (0)
+WHEN  ('?FontButton') (0)
+
+%ButtonRequest DEPEND %Control DEFAULT TIMES 17
+WHEN  ('?CalendarStyle:Radio1') ('None')
+WHEN  ('?CalendarStyle:Radio2') ('None')
+WHEN  ('?Close') ('None')
+WHEN  ('?ColorsTab') ('None')
+WHEN  ('?DateTimePicker') ('None')
+WHEN  ('?DateTimePicker:2') ('None')
+WHEN  ('?FontButton') ('None')
+WHEN  ('?Panel1') ('None')
+WHEN  ('?Prompt1') ('None')
+WHEN  ('?Sheet1') ('None')
+WHEN  ('?String1') ('None')
+WHEN  ('?String5') ('None')
+WHEN  ('?StylesTab') ('None')
+WHEN  ('?bCalendarStyle') ('None')
+WHEN  ('?bCheckBox') ('None')
+WHEN  ('?lBackgroundColor') ('None')
+WHEN  ('?lBackgroundColorBox') ('None')
+
+%ButtonThreadParameters DEPEND %Control DEFAULT TIMES 2
+WHEN  ('?Close') ('')
+WHEN  ('?FontButton') ('')
+
+%ButtonThreadReturnValueAssignment DEPEND %Control FIELD TIMES 2
+WHEN  ('?Close') ()
+WHEN  ('?FontButton') ()
+
+%PreLookupKey DEPEND %Control KEY TIMES 0
+
+%PreLookupField DEPEND %Control COMPONENT TIMES 0
+
+%PreLookupProcedure DEPEND %Control PROCEDURE TIMES 0
+
+%PostLookupKey DEPEND %Control KEY TIMES 0
+
+%PostLookupField DEPEND %Control COMPONENT TIMES 0
+
+%PostLookupProcedure DEPEND %Control PROCEDURE TIMES 0
+
+%PostLookupDuringValidate DEPEND %Control LONG TIMES 17
+WHEN  ('?CalendarStyle:Radio1') (1)
+WHEN  ('?CalendarStyle:Radio2') (1)
+WHEN  ('?Close') (1)
+WHEN  ('?ColorsTab') (1)
+WHEN  ('?DateTimePicker') (1)
+WHEN  ('?DateTimePicker:2') (1)
+WHEN  ('?FontButton') (1)
+WHEN  ('?Panel1') (1)
+WHEN  ('?Prompt1') (1)
+WHEN  ('?Sheet1') (1)
+WHEN  ('?String1') (1)
+WHEN  ('?String5') (1)
+WHEN  ('?StylesTab') (1)
+WHEN  ('?bCalendarStyle') (1)
+WHEN  ('?bCheckBox') (1)
+WHEN  ('?lBackgroundColor') (1)
+WHEN  ('?lBackgroundColorBox') (1)
+
+%ForceWindowRefresh DEPEND %Control LONG TIMES 0
+
+%LookupAssign DEPEND %Control MULTI LONG TIMES 0
+
+%MoreField DEPEND %LookupAssign DEFAULT TIMES 0
+
+%MoreTarget DEPEND %LookupAssign FIELD TIMES 0
+
+%CheckedAssigns DEPEND %Control MULTI LONG TIMES 0
+
+%CheckedAssignVariable DEPEND %CheckedAssigns FIELD TIMES 0
+
+%CheckedAssignValue DEPEND %CheckedAssigns DEFAULT TIMES 0
+
+%CheckedHides DEPEND %Control MULTI LONG TIMES 0
+
+%CheckedControl DEPEND %CheckedHides DEFAULT TIMES 0
+
+%CheckedControlAction DEPEND %CheckedHides DEFAULT TIMES 17
+WHEN  ('?CalendarStyle:Radio1')TIMES 0
+WHEN  ('?CalendarStyle:Radio2')TIMES 0
+WHEN  ('?Close')TIMES 0
+WHEN  ('?ColorsTab')TIMES 0
+WHEN  ('?DateTimePicker')TIMES 0
+WHEN  ('?DateTimePicker:2')TIMES 0
+WHEN  ('?FontButton')TIMES 0
+WHEN  ('?Panel1')TIMES 0
+WHEN  ('?Prompt1')TIMES 0
+WHEN  ('?Sheet1')TIMES 0
+WHEN  ('?String1')TIMES 0
+WHEN  ('?String5')TIMES 0
+WHEN  ('?StylesTab')TIMES 0
+WHEN  ('?bCalendarStyle')TIMES 0
+WHEN  ('?bCheckBox')TIMES 0
+WHEN  ('?lBackgroundColor')TIMES 0
+WHEN  ('?lBackgroundColorBox')TIMES 0
+
+%CheckedEnables DEPEND %Control MULTI LONG TIMES 0
+
+%CheckedControl1 DEPEND %CheckedEnables DEFAULT TIMES 0
+
+%CheckedControl1Action DEPEND %CheckedEnables DEFAULT TIMES 17
+WHEN  ('?CalendarStyle:Radio1')TIMES 0
+WHEN  ('?CalendarStyle:Radio2')TIMES 0
+WHEN  ('?Close')TIMES 0
+WHEN  ('?ColorsTab')TIMES 0
+WHEN  ('?DateTimePicker')TIMES 0
+WHEN  ('?DateTimePicker:2')TIMES 0
+WHEN  ('?FontButton')TIMES 0
+WHEN  ('?Panel1')TIMES 0
+WHEN  ('?Prompt1')TIMES 0
+WHEN  ('?Sheet1')TIMES 0
+WHEN  ('?String1')TIMES 0
+WHEN  ('?String5')TIMES 0
+WHEN  ('?StylesTab')TIMES 0
+WHEN  ('?bCalendarStyle')TIMES 0
+WHEN  ('?bCheckBox')TIMES 0
+WHEN  ('?lBackgroundColor')TIMES 0
+WHEN  ('?lBackgroundColorBox')TIMES 0
+
+%UncheckedAssigns DEPEND %Control MULTI LONG TIMES 0
+
+%UncheckedAssignVariable DEPEND %UncheckedAssigns FIELD TIMES 0
+
+%UncheckedAssignValue DEPEND %UncheckedAssigns DEFAULT TIMES 0
+
+%UnCheckedHides DEPEND %Control MULTI LONG TIMES 0
+
+%UnCheckedControl DEPEND %UnCheckedHides DEFAULT TIMES 0
+
+%UnCheckedControlAction DEPEND %UnCheckedHides DEFAULT TIMES 17
+WHEN  ('?CalendarStyle:Radio1')TIMES 0
+WHEN  ('?CalendarStyle:Radio2')TIMES 0
+WHEN  ('?Close')TIMES 0
+WHEN  ('?ColorsTab')TIMES 0
+WHEN  ('?DateTimePicker')TIMES 0
+WHEN  ('?DateTimePicker:2')TIMES 0
+WHEN  ('?FontButton')TIMES 0
+WHEN  ('?Panel1')TIMES 0
+WHEN  ('?Prompt1')TIMES 0
+WHEN  ('?Sheet1')TIMES 0
+WHEN  ('?String1')TIMES 0
+WHEN  ('?String5')TIMES 0
+WHEN  ('?StylesTab')TIMES 0
+WHEN  ('?bCalendarStyle')TIMES 0
+WHEN  ('?bCheckBox')TIMES 0
+WHEN  ('?lBackgroundColor')TIMES 0
+WHEN  ('?lBackgroundColorBox')TIMES 0
+
+%UnCheckedEnables DEPEND %Control MULTI LONG TIMES 0
+
+%UnCheckedControl1 DEPEND %UnCheckedEnables DEFAULT TIMES 0
+
+%UnCheckedControl1Action DEPEND %UnCheckedEnables DEFAULT TIMES 17
+WHEN  ('?CalendarStyle:Radio1')TIMES 0
+WHEN  ('?CalendarStyle:Radio2')TIMES 0
+WHEN  ('?Close')TIMES 0
+WHEN  ('?ColorsTab')TIMES 0
+WHEN  ('?DateTimePicker')TIMES 0
+WHEN  ('?DateTimePicker:2')TIMES 0
+WHEN  ('?FontButton')TIMES 0
+WHEN  ('?Panel1')TIMES 0
+WHEN  ('?Prompt1')TIMES 0
+WHEN  ('?Sheet1')TIMES 0
+WHEN  ('?String1')TIMES 0
+WHEN  ('?String5')TIMES 0
+WHEN  ('?StylesTab')TIMES 0
+WHEN  ('?bCalendarStyle')TIMES 0
+WHEN  ('?bCheckBox')TIMES 0
+WHEN  ('?lBackgroundColor')TIMES 0
+WHEN  ('?lBackgroundColorBox')TIMES 0
+
+%GlobalObject DEPEND %ClassItem DEFAULT TIMES 2
+WHEN  ('Default') ('NO')
+WHEN  ('WindowToolbar') ('NO')
+
+%ProcedureDisableEnhanceFocus LONG  (0)
+%ProcedureUseEnterInsteadTabOverride LONG  (0)
+%WindowUseEnterInsteadTab LONG  (1)
+%ProcedureUseEnterInsteadTabExcludeG LONG  (1)
+%WindowUseEnterInsteadTabExclude MULTI DEFAULT  ()
+%WindowStyles MULTI LONG  ()
+%WindowStyleFontName DEPEND %WindowStyles DEFAULT TIMES 0
+
+%WindowStyleFontSize DEPEND %WindowStyles DEFAULT TIMES 0
+
+%WindowStyleFontStyle DEPEND %WindowStyles DEFAULT TIMES 0
+
+%WindowStyleFontColor DEPEND %WindowStyles DEFAULT TIMES 0
+
+%WindowStyleFontCharSet DEPEND %WindowStyles DEFAULT TIMES 0
+
+%WindowStyleForegroundNormal DEPEND %WindowStyles LONG TIMES 0
+
+%WindowStyleBackgroundNormal DEPEND %WindowStyles LONG TIMES 0
+
+%WindowStyleForegroundSelected DEPEND %WindowStyles LONG TIMES 0
+
+%WindowStyleBackgroundSelected DEPEND %WindowStyles LONG TIMES 0
+
+%WindowStylePicture DEPEND %WindowStyles DEFAULT TIMES 0
+
+%WindowStyleOtherListboxes MULTI DEFAULT  ()
+%ProcedureAutoBindFields MULTI LONG  ()
+%ProcedureAutoBindField DEPEND %ProcedureAutoBindFields DEFAULT TIMES 0
+
+%ProcedureAutoBindFieldTPL DEPEND %ProcedureAutoBindFields DEFAULT TIMES 0
+
+%ProcedureAutoBindProcedures MULTI LONG  ()
+%ProcedureAutoBindProcedure DEPEND %ProcedureAutoBindProcedures DEFAULT TIMES 0
+
+%ProcedureAutoBindProcedureTPL DEPEND %ProcedureAutoBindProcedures DEFAULT TIMES 0
+
+%ProcedureUserBindFields MULTI LONG  ()
+%ProcedureUserBindField DEPEND %ProcedureUserBindFields FIELD TIMES 0
+
+%ProcedureAutoBindFieldIgnore DEPEND %ProcedureAutoBindFields LONG TIMES 0
+
+%ProcedureUserBindProcedures MULTI LONG  ()
+%ProcedureUserBindProcedure DEPEND %ProcedureUserBindProcedures PROCEDURE TIMES 0
+
+%ProcedureAutoBindProcedureIgnore DEPEND %ProcedureAutoBindProcedures LONG TIMES 0
+
+%ProcedureUserBindExpressions MULTI LONG  ()
+%ProcedureUserBindExpressionName DEPEND %ProcedureUserBindExpressions DEFAULT TIMES 0
+
+%ProcedureUserBindExpression DEPEND %ProcedureUserBindExpressions DEFAULT TIMES 0
+
+%PreLookupProcedureParameters DEPEND %Control DEFAULT TIMES 0
+
+%PostLookupProcedureParameters DEPEND %Control DEFAULT TIMES 0
+
+%WindowStyleFontNameVariable DEPEND %WindowStyles DEFAULT TIMES 0
+
+%WindowStyleFontNameIsVariable DEPEND %WindowStyles LONG TIMES 0
+
+%WindowStyleFontSizeVariable DEPEND %WindowStyles DEFAULT TIMES 0
+
+%WindowStyleFontSizeIsVariable DEPEND %WindowStyles LONG TIMES 0
+
+%WindowStyleFontStyleVariable DEPEND %WindowStyles DEFAULT TIMES 0
+
+%WindowStyleFontStyleIsVariable DEPEND %WindowStyles LONG TIMES 0
+
+%WindowStyleForegroundNormalVariable DEPEND %WindowStyles DEFAULT TIMES 0
+
+%WindowStyleForegroundNormalIsVariable DEPEND %WindowStyles LONG TIMES 0
+
+%WindowStyleBackgroundNormalVariable DEPEND %WindowStyles DEFAULT TIMES 0
+
+%WindowStyleBackgroundNormalIsVariable DEPEND %WindowStyles LONG TIMES 0
+
+%WindowStyleForegroundSelectedVariable DEPEND %WindowStyles DEFAULT TIMES 0
+
+%WindowStyleForegroundSelectedIsVariable DEPEND %WindowStyles LONG TIMES 0
+
+%WindowStyleBackgroundSelectedVariable DEPEND %WindowStyles DEFAULT TIMES 0
+
+%WindowStyleBackgroundSelectedIsVariable DEPEND %WindowStyles LONG TIMES 0
+
+%WindowStylePictureVariable DEPEND %WindowStyles DEFAULT TIMES 0
+
+%WindowStylePictureIsVariable DEPEND %WindowStyles LONG TIMES 0
+
+%ProcedureUseEnterInsteadTabExcludeListCombo LONG  (0)
+%ProcedureUseEnterInsteadTabDisableNextTabStop LONG  (0)
+%ProcedureAutoBindFieldsIgnored MULTI LONG  ()
+%ProcedureAutoBindFieldIgnored DEPEND %ProcedureAutoBindFieldsIgnored DEFAULT TIMES 0
+
+%ProcedureAutoBindProceduresIgnored MULTI LONG  ()
+%ProcedureAutoBindProcedureIgnored DEPEND %ProcedureAutoBindProceduresIgnored DEFAULT TIMES 0
+
+%ProcedureAutoBindValidToAddField LONG  (0)
+%ProcedureUseEnterInsteadTabEnableNextTabStop LONG  (0)
+%ExtUITabIcon DEPEND %Control DEFAULT TIMES 0
+
+%ExtUITabStyleOverrideGlobal DEPEND %Control LONG TIMES 0
+
+%ExtUITabStyle DEPEND %Control DEFAULT TIMES 1
+WHEN  ('?Sheet1') ('Default')
+
+%CheckedDisables DEPEND %Control MULTI LONG TIMES 0
+
+%CheckedDisableControl DEPEND %CheckedDisables DEFAULT TIMES 0
+
+%CheckedDisableControlAction DEPEND %CheckedDisables DEFAULT TIMES 0
+
+%UnCheckedDisables DEPEND %Control MULTI LONG TIMES 0
+
+%UnCheckedDisableControl DEPEND %UnCheckedDisables DEFAULT TIMES 0
+
+%UnCheckedDisableControlAction DEPEND %UnCheckedDisables DEFAULT TIMES 0
+
+%ProcedureOneInstance LONG  (0)
+%FieldGradientColorType DEPEND %Control DEFAULT TIMES 9
+WHEN  ('?DateTimePicker') ('Off')
+WHEN  ('?DateTimePicker:2') ('Off')
+WHEN  ('?Panel1') ('Off')
+WHEN  ('?lBackgroundColorBox') ('Off')
+WHEN  ('?lCalendarBackColorBox') ('Off')
+WHEN  ('?lCalendarForeColorBox') ('Off')
+WHEN  ('?lCalendarTitleBackColorBox') ('Off')
+WHEN  ('?lCalendarTitleForeColorBox') ('Off')
+WHEN  ('?lCalendarTrailingForeColorBox') ('Off')
+
+%FieldGradientColorTypeVariable DEPEND %Control DEFAULT TIMES 9
+WHEN  ('?DateTimePicker') ('')
+WHEN  ('?DateTimePicker:2') ('')
+WHEN  ('?Panel1') ('')
+WHEN  ('?lBackgroundColorBox') ('')
+WHEN  ('?lCalendarBackColorBox') ('')
+WHEN  ('?lCalendarForeColorBox') ('')
+WHEN  ('?lCalendarTitleBackColorBox') ('')
+WHEN  ('?lCalendarTitleForeColorBox') ('')
+WHEN  ('?lCalendarTrailingForeColorBox') ('')
+
+%FieldGradientColorTypeIsVariable DEPEND %Control LONG TIMES 9
+WHEN  ('?DateTimePicker') (0)
+WHEN  ('?DateTimePicker:2') (0)
+WHEN  ('?Panel1') (0)
+WHEN  ('?lBackgroundColorBox') (0)
+WHEN  ('?lCalendarBackColorBox') (0)
+WHEN  ('?lCalendarForeColorBox') (0)
+WHEN  ('?lCalendarTitleBackColorBox') (0)
+WHEN  ('?lCalendarTitleForeColorBox') (0)
+WHEN  ('?lCalendarTrailingForeColorBox') (0)
+
+%FieldGradientColorFrom DEPEND %Control LONG TIMES 9
+WHEN  ('?DateTimePicker') (-1)
+WHEN  ('?DateTimePicker:2') (-1)
+WHEN  ('?Panel1') (-1)
+WHEN  ('?lBackgroundColorBox') (-1)
+WHEN  ('?lCalendarBackColorBox') (-1)
+WHEN  ('?lCalendarForeColorBox') (-1)
+WHEN  ('?lCalendarTitleBackColorBox') (-1)
+WHEN  ('?lCalendarTitleForeColorBox') (-1)
+WHEN  ('?lCalendarTrailingForeColorBox') (-1)
+
+%FieldGradientColorFromVariable DEPEND %Control DEFAULT TIMES 0
+
+%FieldGradientColorFromIsVariable DEPEND %Control LONG TIMES 9
+WHEN  ('?DateTimePicker') (0)
+WHEN  ('?DateTimePicker:2') (0)
+WHEN  ('?Panel1') (0)
+WHEN  ('?lBackgroundColorBox') (0)
+WHEN  ('?lCalendarBackColorBox') (0)
+WHEN  ('?lCalendarForeColorBox') (0)
+WHEN  ('?lCalendarTitleBackColorBox') (0)
+WHEN  ('?lCalendarTitleForeColorBox') (0)
+WHEN  ('?lCalendarTrailingForeColorBox') (0)
+
+%FieldGradientColorTo DEPEND %Control LONG TIMES 9
+WHEN  ('?DateTimePicker') (-1)
+WHEN  ('?DateTimePicker:2') (-1)
+WHEN  ('?Panel1') (-1)
+WHEN  ('?lBackgroundColorBox') (-1)
+WHEN  ('?lCalendarBackColorBox') (-1)
+WHEN  ('?lCalendarForeColorBox') (-1)
+WHEN  ('?lCalendarTitleBackColorBox') (-1)
+WHEN  ('?lCalendarTitleForeColorBox') (-1)
+WHEN  ('?lCalendarTrailingForeColorBox') (-1)
+
+%FieldGradientColorToVariable DEPEND %Control DEFAULT TIMES 0
+
+%FieldGradientColorToIsVariable DEPEND %Control LONG TIMES 9
+WHEN  ('?DateTimePicker') (0)
+WHEN  ('?DateTimePicker:2') (0)
+WHEN  ('?Panel1') (0)
+WHEN  ('?lBackgroundColorBox') (0)
+WHEN  ('?lCalendarBackColorBox') (0)
+WHEN  ('?lCalendarForeColorBox') (0)
+WHEN  ('?lCalendarTitleBackColorBox') (0)
+WHEN  ('?lCalendarTitleForeColorBox') (0)
+WHEN  ('?lCalendarTrailingForeColorBox') (0)
+
+%PreserveVarsLoc MULTI LONG  ()
+%PreserveVarLoc DEPEND %PreserveVarsLoc DEFAULT TIMES 0
+
+%ActiveImageEnable DEPEND %Control LONG TIMES 0
+
+%AIObjectName DEPEND %Control DEFAULT TIMES 0
+
+%AIEnableMimicControl DEPEND %Control LONG TIMES 0
+
+%AIMimicControl DEPEND %Control DEFAULT TIMES 0
+
+%AIImgRound DEPEND %Control LONG TIMES 0
+
+%AIOverrideImg DEPEND %Control DEFAULT TIMES 0
+
+%AIOverrideImgVariable DEPEND %Control DEFAULT TIMES 0
+
+%AIOverrideImgIsVariable DEPEND %Control LONG TIMES 0
+
+%AIDisableImg DEPEND %Control DEFAULT TIMES 0
+
+%AIDisableImgVariable DEPEND %Control DEFAULT TIMES 0
+
+%AIDisableImgIsVariable DEPEND %Control LONG TIMES 0
+
+%AIHotImg DEPEND %Control DEFAULT TIMES 0
+
+%AIHotImgVariable DEPEND %Control DEFAULT TIMES 0
+
+%AIHotImgIsVariable DEPEND %Control LONG TIMES 0
+
+%AIPressedImg DEPEND %Control DEFAULT TIMES 0
+
+%AIPressedImgVariable DEPEND %Control DEFAULT TIMES 0
+
+%AIPressedImgIsVariable DEPEND %Control LONG TIMES 0
+
+[EMBED]
+EMBED %ControlEventHandling
+[INSTANCES]
+WHEN '?Close'
+[INSTANCES]
+WHEN 'Accepted'
+[DEFINITION]
+[GROUP]
+PRIORITY 5000
+INSTANCE 2
+[END]
+[END]
+WHEN '?bCheckBox'
+[INSTANCES]
+WHEN 'Accepted'
+[DEFINITION]
+[SOURCE]
+PROPERTY:BEGIN
+PRIORITY 5000
+PROPERTY:END
+DatePicker.SetShowNone(bCheckBox)
+DO RefreshDTPicker
+[END]
+[END]
+WHEN '?bCalendarStyle'
+[INSTANCES]
+WHEN 'Accepted'
+[DEFINITION]
+[SOURCE]
+PROPERTY:BEGIN
+PRIORITY 5000
+PROPERTY:END
+DatePicker.SetUpDown(bCalendarStyle)
+DatePicker.SetRightAlign(bCalendarStyle)
+DO RefreshDTPicker
+[END]
+[END]
+WHEN '?lCalendarBackColor'
+[INSTANCES]
+WHEN 'Accepted'
+[DEFINITION]
+[SOURCE]
+PROPERTY:BEGIN
+PRIORITY 5000
+PROPERTY:END
+ IF COLORDIALOG('Choose Calendar Background Color',lCalendarBackColor)
+    DatePicker.SetCalendarBackColor(lCalendarBackColor)
+    ?lCalendarBackColorBox{PROP:Fill} = lCalendarBackColor
+ END
+[END]
+[END]
+WHEN '?lCalendarForeColor'
+[INSTANCES]
+WHEN 'Accepted'
+[DEFINITION]
+[SOURCE]
+PROPERTY:BEGIN
+PRIORITY 5000
+PROPERTY:END
+ IF COLORDIALOG('Choose Calendar Foreground Color',lCalendarForeColor)
+    DatePicker.SetCalendarForeColor(lCalendarForeColor)
+    ?lCalendarForeColorBox{PROP:Fill} = lCalendarForeColor
+ END
+[END]
+[END]
+WHEN '?lCalendarTitleBackColor'
+[INSTANCES]
+WHEN 'Accepted'
+[DEFINITION]
+[SOURCE]
+PROPERTY:BEGIN
+PRIORITY 5000
+PROPERTY:END
+ IF COLORDIALOG('Choose Title Background Color',lCalendarTitleBackColor)
+    DatePicker.SetCalendarTitleBackColor(lCalendarTitleBackColor)
+    ?lCalendarTitleBackColorBox{PROP:Fill} = lCalendarTitleBackColor
+ END
+[END]
+[END]
+WHEN '?lCalendarTitleForeColor'
+[INSTANCES]
+WHEN 'Accepted'
+[DEFINITION]
+[SOURCE]
+PROPERTY:BEGIN
+PRIORITY 5000
+PROPERTY:END
+ IF COLORDIALOG('Choose Title Foreground Color',lCalendarTitleForeColor)
+    DatePicker.SetCalendarTitleForeColor(lCalendarTitleForeColor)
+    ?lCalendarTitleForeColorBox{PROP:Fill} = lCalendarTitleForeColor
+ END
+[END]
+[END]
+WHEN '?lBackgroundColor'
+[INSTANCES]
+WHEN 'Accepted'
+[DEFINITION]
+[SOURCE]
+PROPERTY:BEGIN
+PRIORITY 5000
+PROPERTY:END
+ IF COLORDIALOG('Choose Background Color',lBackgroundColor)
+    DatePicker.SetBackgroundColor(lBackgroundColor)
+    ?lBackgroundColorBox{PROP:Fill} = lBackgroundColor
+ END
+[END]
+[END]
+WHEN '?lCalendarTrailingForeColor'
+[INSTANCES]
+WHEN 'Accepted'
+[DEFINITION]
+[SOURCE]
+PROPERTY:BEGIN
+PRIORITY 5000
+PROPERTY:END
+ IF COLORDIALOG('Choose Trailing Foreground Color',lCalendarTrailingForeColor)
+    DatePicker.SetCalendarTrailingForeColor(lCalendarTrailingForeColor)
+    ?lCalendarTrailingForeColorBox{PROP:Fill} = lCalendarTrailingForeColor
+ END
+[END]
+[END]
+WHEN '?FontButton'
+[INSTANCES]
+WHEN 'Accepted'
+[DEFINITION]
+[SOURCE]
+PROPERTY:BEGIN
+PRIORITY 5000
+PROPERTY:END
+IF FONTDIALOG('Choose Calendar Font',szTypeface,lFontSize,lCalendarForeColor,lFontStyle,0)
+   DatePicker.SetMCFont(szTypeface,lFontSize,lCalendarForeColor,lFontStyle) !Set calendar font
+   DatePicker.SetFont(szTypeface,lFontSize,lFontStyle) !Set control font
+   TimePicker.SetFont(szTypeface,lFontSize,lFontStyle) !Set control font
+!   DatePicker.SetCalendarForeColor(lCalendarForeColor)
+   ?lCalendarForeColorBox{PROP:Fill} = lCalendarForeColor
+END
+[END]
+[END]
+[END]
+EMBED %WindowEventHandling
+[INSTANCES]
+WHEN 'OpenWindow'
+[DEFINITION]
+[SOURCE]
+PROPERTY:BEGIN
+PRIORITY 7500
+PROPERTY:END
+
+lCalendarBackColor = DatePicker.GetCalendarBackColor()
+lCalendarForeColor = DatePicker.GetCalendarForeColor()
+lCalendarTitleBackColor = DatePicker.GetCalendarTitleBackColor()
+lCalendarTitleForeColor = DatePicker.GetCalendarTitleForeColor()
+lCalendarTrailingForeColor = DatePicker.GetCalendarTrailingForeColor()
+lBackgroundColor = DatePicker.GetBackgroundColor()
+
+?lCalendarBackColorBox{PROP:Fill} = DatePicker.GetCalendarBackColor()
+?lCalendarForeColorBox{PROP:Fill} = DatePicker.GetCalendarForeColor()
+?lCalendarTitleBackColorBox{PROP:Fill} = DatePicker.GetCalendarTitleBackColor()
+?lCalendarTitleForeColorBox{PROP:Fill} = DatePicker.GetCalendarTitleForeColor()
+?lCalendarTrailingForeColorBox{PROP:Fill} = DatePicker.GetCalendarTrailingForeColor()
+?lBackgroundColorBox{PROP:Fill} = DatePicker.GetBackgroundColor()
+
+szTypeface = 'MS Sans Serif'
+lFontSize  = 10
+lFontStyle = FONT:regular
+DatePicker.SetMCFont(szTypeface,lFontSize,lCalendarForeColor,lFontStyle) !Set calendar font
+DatePicker.SetFont(szTypeface,lFontSize,lFontStyle) !Set control font
+TimePicker.SetFont(szTypeface,lFontSize,lFontStyle) !Set control font
+   
+[END]
+[END]
+EMBED %WindowManagerMethodCodeSection
+[INSTANCES]
+WHEN 'Init'
+[INSTANCES]
+WHEN '(),BYTE'
+[DEFINITION]
+[SOURCE]
+PROPERTY:BEGIN
+PRIORITY 7000
+PROPERTY:END
+lDateValue = TODAY()
+lTimeValue = CLOCK()
+[END]
+[END]
+[END]
+EMBED %ProcedureRoutines
+[DEFINITION]
+[SOURCE]
+PROPERTY:BEGIN
+PRIORITY 4000
+PROPERTY:END
+RefreshDTPicker ROUTINE
+  DatePicker.Refresh()
+  EXIT
+[END]
+EMBED %DataSection
+[DEFINITION]
+[SOURCE]
+PROPERTY:BEGIN
+PRIORITY 1300
+PROPERTY:END
+!region Copyright and License
+! ================================================================================
+! Notice : Copyright (C) 2017, Devuna
+!          Distributed under LGPLv3 (http://www.gnu.org/licenses/lgpl.html)
+!
+!    This file is part of Devuna-DateTimePicker (https://github.com/Devuna/Devuna-DateTimePicker)
+!
+!    Devuna-DateTimePicker is free software: you can redistribute it and/or modify
+!    it under the terms of the GNU General Public License as published by
+!    the Free Software Foundation, either version 3 of the License, or
+!    (at your option) any later version.
+!
+!    Devuna-DateTimePicker is distributed in the hope that it will be useful,
+!    but WITHOUT ANY WARRANTY; without even the implied warranty of
+!    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+!    GNU General Public License for more details.
+!
+!    You should have received a copy of the GNU General Public License
+!    along with this file.  If not, see <http://www.gnu.org/licenses/>.
+! ================================================================================
+!endRegion
+[END]
+[END]
+[ADDITION]
+NAME KCR_DateTimePicker KCR_SubClassClientWindow
+[INSTANCE]
+INSTANCE 4
+[PROMPTS]
+%TplName DEFAULT  ('KCR_SubClassClientWindow (Devuna)')
+%TplDescription DEFAULT  ('SubClass Client Window Extension')
+[ADDITION]
+NAME KCR_DateTimePicker KCR_DateTimeControl
+[INSTANCE]
+INSTANCE 5
+PARENT 4
+[PROMPTS]
+%TplName DEFAULT  ('KCR_DateTimePicker (Devuna)')
+%TplDescription DEFAULT  ('Add DateTimePicker to Procedure')
+%InstancePrefix DEFAULT  ('DatePicker')
+%AppCanParse LONG  (0)
+%UserNameNotificationFn PROCEDURE  ()
+%Format DEFAULT  ('2')
+%CustomFormat DEFAULT  ('')
+%ShowNone LONG  (0)
+%UpDown LONG  (0)
+%RightAlign LONG  (1)
+%Visible LONG  (1)
+%ControlGetsFocus LONG  (1)
+%DateValueField DEFAULT  ('lDateValue')
+%TimeValueField DEFAULT  ('')
+%ChangeNotificationEvent DEFAULT  ('EVENT:DatePickerChanged')
+[INSTANCE]
+INSTANCE 6
+PARENT 4
+[PROMPTS]
+%TplName DEFAULT  ('KCR_DateTimePicker (Devuna)')
+%TplDescription DEFAULT  ('Add DateTimePicker to Procedure')
+%InstancePrefix DEFAULT  ('TimePicker')
+%AppCanParse LONG  (0)
+%UserNameNotificationFn PROCEDURE  ()
+%Format DEFAULT  ('3')
+%CustomFormat DEFAULT  ('')
+%ShowNone LONG  (0)
+%UpDown LONG  (0)
+%RightAlign LONG  (0)
+%Visible LONG  (1)
+%ControlGetsFocus LONG  (0)
+%DateValueField DEFAULT  ('')
+%TimeValueField DEFAULT  ('lTimeValue')
+%ChangeNotificationEvent DEFAULT  ('EVENT:TimePickerChanged')
+[ADDITION]
+NAME ABC CloseCurrentWindow
+[INSTANCE]
+INSTANCE 2
+[WINDOW]
+Window  WINDOW('DateTimePicker Demo Application'),AT(,,168,130),FONT('Microsoft Sans Serif', |
+          10,,FONT:regular,CHARSET:ANSI),DOUBLE,CENTER,ICON('dtpicker.ico'),GRAY,SYSTEM
+          SHEET,AT(4,4,160,106),USE(?Sheet1),#ORIG(?Sheet1),#ORDINAL(1)
+            TAB('Styles'),USE(?StylesTab),#ORIG(?Tab2),#ORDINAL(2)
+              BOX,AT(8,20,95,10),USE(?DateTimePicker),COLOR(COLOR:Gray),LINEWIDTH(1),#ORIG(?DateTimePicker), |
+                #SEQ(5),#ORDINAL(3)
+              BOX,AT(106,20,54,10),USE(?DateTimePicker:2),COLOR(COLOR:Gray),LINEWIDTH(1),#ORIG(?DateTimePicker), |
+                #SEQ(6),#ORDINAL(4)
+              OPTION('Calendar Style'),AT(8,36,152,32),USE(bCalendarStyle),BOXED,TRN,#ORIG(?Option1), |
+                #ORDINAL(5)
+                RADIO('Use the drop-down calendar to select a date.'),AT(12,44,144,10),USE(?CalendarStyle:Radio1), |
+                  TRN,VALUE('0'),#ORIG(?Option1:Radio1),#ORDINAL(6)
+                RADIO('Use the up-down buttons to select a date.'),AT(12,54,144,10),USE(?CalendarStyle:Radio2), |
+                  TRN,VALUE('1'),#ORIG(?Option1:Radio2),#ORDINAL(7)
+              END
+              CHECK('Use Check Box'),AT(8,72),USE(bCheckBox),TRN,#ORIG(bCheckBox),#ORDINAL(8)
+              PROMPT('The check box allows the user to determine whether or not to set ' & |
+                'the date using the control. When the check box is empty, no date is selected.'), |
+                AT(8,80,154,25),USE(?Prompt1),TRN,#ORIG(?Prompt1),#ORDINAL(9)
+            END
+            TAB('Colors'),USE(?ColorsTab),#ORIG(?Tab1),#ORDINAL(10)
+              STRING('Calendar Background:'),AT(8,20),USE(?String1),TRN,#ORIG(?String1),#ORDINAL(11)
+              REGION,AT(78,20,82,10),USE(?lCalendarBackColor),#ORIG(?Region1),#ORDINAL(12)
+              BOX,AT(78,20,82,10),USE(?lCalendarBackColorBox),COLOR(COLOR:Black),LINEWIDTH(1), |
+                ROUND,#ORIG(?Box3),#ORDINAL(13)
+              STRING('Calendar Foreground:'),AT(8,32),USE(?String2),TRN,#ORIG(?String1),#ORDINAL(14)
+              REGION,AT(78,32,82,10),USE(?lCalendarForeColor),#ORIG(?Region1),#ORDINAL(15)
+              BOX,AT(78,32,82,10),USE(?lCalendarForeColorBox),COLOR(COLOR:Black),LINEWIDTH(1), |
+                ROUND,#ORIG(?Box3),#ORDINAL(16)
+              STRING('Title Background:'),AT(8,44),USE(?String3),TRN,#ORIG(?String1),#ORDINAL(17)
+              REGION,AT(78,44,82,10),USE(?lCalendarTitleBackColor),#ORIG(?Region1),#ORDINAL(18)
+              BOX,AT(78,44,82,10),USE(?lCalendarTitleBackColorBox),COLOR(COLOR:Black),LINEWIDTH(1), |
+                ROUND,#ORIG(?Box3),#ORDINAL(19)
+              STRING('Title Foreground:'),AT(8,56),USE(?String4),TRN,#ORIG(?String1),#ORDINAL(20)
+              REGION,AT(78,56,82,10),USE(?lCalendarTitleForeColor),#ORIG(?Region1),#ORDINAL(21)
+              BOX,AT(78,56,82,10),USE(?lCalendarTitleForeColorBox),COLOR(COLOR:Black),LINEWIDTH(1), |
+                ROUND,#ORIG(?Box3),#ORDINAL(22)
+              STRING('Background:'),AT(8,92),USE(?String5),TRN,#ORIG(?String1),#ORDINAL(23)
+              REGION,AT(78,92,82,10),USE(?lBackgroundColor),#ORIG(?Region1),#ORDINAL(24)
+              BOX,AT(78,92,82,10),USE(?lBackgroundColorBox),COLOR(COLOR:Black),LINEWIDTH(1), |
+                ROUND,#ORIG(?Box3),#ORDINAL(25)
+              STRING('Trailing Foreground:'),AT(8,68),USE(?String6),TRN,#ORIG(?String1),#ORDINAL(26)
+              REGION,AT(78,68,82,10),USE(?lCalendarTrailingForeColor),#ORIG(?Region1),#ORDINAL(27)
+              PANEL,AT(8,84,152,1),USE(?Panel1),#ORIG(?Panel1),#ORDINAL(28)
+              BOX,AT(78,68,82,10),USE(?lCalendarTrailingForeColorBox),COLOR(COLOR:Black),LINEWIDTH(1), |
+                ROUND,#ORIG(?Box3),#ORDINAL(29)
+            END
+          END
+          BUTTON('Font...'),AT(4,113,45,14),USE(?FontButton),#ORIG(?Button2),#ORDINAL(30)
+          BUTTON('Cl&ose'),AT(119,113,45,14),USE(?Close),#ORIG(?Button1),#ORDINAL(31)
+        END
+
+[END]
