@@ -14,7 +14,7 @@ images - SoftVelocity/Clarion10/Accessory/images
 
 libsrc/win - SoftVelocity/Clarion10/Accessory/libsrc/win
 
-template - SoftVelocity/Clarion10/Accessory/template/win
+template/win - SoftVelocity/Clarion10/Accessory/template/win
 
 # Documentation Contents #
 --------
