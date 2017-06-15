@@ -1,0 +1,125 @@
+
+<HTML>
+<!-- Sitemap 1.0 -->
+<OBJECT TYPE="text/site properties">
+</OBJECT>
+<UL>
+	<LI><OBJECT TYPE="text/sitemap">
+		<PARAM NAME="Name" VALUE="DateTimePickerHwnd">
+		<PARAM NAME="Name" VALUE="DateTimePickerHwnd">
+		<PARAM NAME="Local" VALUE="DateTimePickerHwnd.htm">
+		</OBJECT>
+	<LI><OBJECT TYPE="text/sitemap">
+		<PARAM NAME="Name" VALUE="GetHwnd">
+		<PARAM NAME="Name" VALUE="GetHwnd">
+		<PARAM NAME="Local" VALUE="GetHwnd.htm">
+		</OBJECT>
+	<LI><OBJECT TYPE="text/sitemap">
+		<PARAM NAME="Name" VALUE="GetSelection">
+		<PARAM NAME="Name" VALUE="GetSelection">
+		<PARAM NAME="Local" VALUE="GetSelection.htm">
+		</OBJECT>
+	<LI><OBJECT TYPE="text/sitemap">
+		<PARAM NAME="Name" VALUE="Introduction">
+		<PARAM NAME="Name" VALUE="Introduction">
+		<PARAM NAME="Local" VALUE="Introduction.htm">
+		</OBJECT>
+	<LI><OBJECT TYPE="text/sitemap">
+		<PARAM NAME="Name" VALUE="LongToSystemTime">
+		<PARAM NAME="Name" VALUE="LongToSystemTime">
+		<PARAM NAME="Local" VALUE="LongToSystemTime.htm">
+		</OBJECT>
+	<LI><OBJECT TYPE="text/sitemap">
+		<PARAM NAME="Name" VALUE="SCT_ClipboardToImage Procedure">
+		<PARAM NAME="Name" VALUE="ClearSelection">
+		<PARAM NAME="Local" VALUE="ClearSelection.htm">
+		</OBJECT>
+	<LI><OBJECT TYPE="text/sitemap">
+		<PARAM NAME="Name" VALUE="SCT_Error Procedure">
+		<PARAM NAME="Name" VALUE="CreateDTPicker">
+		<PARAM NAME="Local" VALUE="CreateDTPicker.htm">
+		</OBJECT>
+	<LI><OBJECT TYPE="text/sitemap">
+		<PARAM NAME="Name" VALUE="SCT_GetAppWindow Procedure">
+		<PARAM NAME="Name" VALUE="GetRange">
+		<PARAM NAME="Local" VALUE="GetRange.htm">
+		</OBJECT>
+	<LI><OBJECT TYPE="text/sitemap">
+		<PARAM NAME="Name" VALUE="SCT_HotKeyPrint_Template">
+		<PARAM NAME="Name" VALUE="KCR_SubClassClientWindow">
+		<PARAM NAME="Local" VALUE="KCR_SubClassClientWindow.htm">
+		</OBJECT>
+	<LI><OBJECT TYPE="text/sitemap">
+		<PARAM NAME="Name" VALUE="SCT_Init Procedure">
+		<PARAM NAME="Name" VALUE="Init">
+		<PARAM NAME="Local" VALUE="Init.htm">
+		</OBJECT>
+	<LI><OBJECT TYPE="text/sitemap">
+		<PARAM NAME="Name" VALUE="SCT_Initialization Template">
+		<PARAM NAME="Name" VALUE="KCR_DateTimePickerClass">
+		<PARAM NAME="Local" VALUE="KCR_DateTimePickerClass.htm">
+		</OBJECT>
+	<LI><OBJECT TYPE="text/sitemap">
+		<PARAM NAME="Name" VALUE="SCT_PrintClipboard Procedure">
+		<PARAM NAME="Name" VALUE="Kill">
+		<PARAM NAME="Local" VALUE="Kill.htm">
+		</OBJECT>
+	<LI><OBJECT TYPE="text/sitemap">
+		<PARAM NAME="Name" VALUE="SCT_PrintScreen">
+		<PARAM NAME="Name" VALUE="KCR_DateTimePicker">
+		<PARAM NAME="Local" VALUE="KCR_DateTimePicker.htm">
+		</OBJECT>
+	<LI><OBJECT TYPE="text/sitemap">
+		<PARAM NAME="Name" VALUE="SCT_PrintSelectedArea Procedure">
+		<PARAM NAME="Name" VALUE="SetCalendarBackColor">
+		<PARAM NAME="Local" VALUE="SetCalendarBackColor.htm">
+		<PARAM NAME="Name" VALUE="GetCalendarBackColor">
+		<PARAM NAME="Local" VALUE="GetCalendarBackColor.htm">
+		</OBJECT>
+	<LI><OBJECT TYPE="text/sitemap">
+		<PARAM NAME="Name" VALUE="SCT_PrintWindow Procedure">
+		<PARAM NAME="Name" VALUE="SetCalendarForeColor">
+		<PARAM NAME="Local" VALUE="SetCalendarForeColor.htm">
+		<PARAM NAME="Name" VALUE="GetCalendarForeColor">
+		<PARAM NAME="Local" VALUE="GetCalendarForeColor.htm">
+		</OBJECT>
+	<LI><OBJECT TYPE="text/sitemap">
+		<PARAM NAME="Name" VALUE="SCT_SaveClipboard">
+		<PARAM NAME="Name" VALUE="SetCalendarTitleBackColor">
+		<PARAM NAME="Local" VALUE="SetCalendarTitleBackColor.htm">
+		<PARAM NAME="Name" VALUE="GetCalendarTitleBackColor">
+		<PARAM NAME="Local" VALUE="GetCalendarTitleBackColor.htm">
+		</OBJECT>
+	<LI><OBJECT TYPE="text/sitemap">
+		<PARAM NAME="Name" VALUE="SCT_SaveSelectedArea Procedure">
+		<PARAM NAME="Name" VALUE="SetCalendarTitleForeColor">
+		<PARAM NAME="Local" VALUE="SetCalendarTitleForeColor.htm">
+		<PARAM NAME="Name" VALUE="GetCalendarTitleForeColor">
+		<PARAM NAME="Local" VALUE="GetCalendarTitleForeColor.htm">
+		</OBJECT>
+	<LI><OBJECT TYPE="text/sitemap">
+		<PARAM NAME="Name" VALUE="SCT_SaveWindow Procedure">
+		<PARAM NAME="Name" VALUE="SetCalendarTrailingForeColor">
+		<PARAM NAME="Local" VALUE="SetCalendarTrailingForeColor.htm">
+		<PARAM NAME="Name" VALUE="GetCalendarTrailingForeColor">
+		<PARAM NAME="Local" VALUE="GetCalendarTrailingForeColor.htm">
+		</OBJECT>
+	<LI><OBJECT TYPE="text/sitemap">
+		<PARAM NAME="Name" VALUE="SetCalendarTrailingBackColor">
+		<PARAM NAME="Name" VALUE="SetBackgroundColor">
+		<PARAM NAME="Local" VALUE="SetBackgroundColor.htm">
+		<PARAM NAME="Name" VALUE="GetBackgroundColor">
+		<PARAM NAME="Local" VALUE="GetBackgroundColor.htm">
+		</OBJECT>
+	<LI><OBJECT TYPE="text/sitemap">
+		<PARAM NAME="Name" VALUE="SetUpDown">
+		<PARAM NAME="Name" VALUE="SetUpDown">
+		<PARAM NAME="Local" VALUE="SetUpDown.htm">
+		</OBJECT>
+	<LI><OBJECT TYPE="text/sitemap">
+		<PARAM NAME="Name" VALUE="SystemTimeToLong">
+		<PARAM NAME="Name" VALUE="SystemTimeToLong">
+		<PARAM NAME="Local" VALUE="SystemTimeToLong.htm">
+		</OBJECT>
+</UL>
+</HTML>

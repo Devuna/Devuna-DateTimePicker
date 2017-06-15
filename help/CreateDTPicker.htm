@@ -1,0 +1,114 @@
+<HTML><HEAD><TITLE>CreateDTPicker</TITLE>
+<META NAME="GENERATOR" CONTENT="ForeHTML Pro 5.0">
+<LINK REL="STYLESHEET" TYPE="text/css" HREF="DTPicker.css">
+
+</HEAD>
+
+<BODY>
+
+
+<P CLASS="BannerBase">
+CreateDTPicker (create a datetimepicker control)</P><HR>
+<P CLASS="Base" STYLE="font-size: 11pt ; margin: 0pt  0pt  1px  144pt ; text-indent: -144pt ; font-family: segoe ui semilight,sans-serif; ">
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>CreateDTPicker( </B><SPAN  STYLE="font-size: 8pt ; ">LONG </SPAN><I><SPAN  STYLE="font-size: 8pt ; ">param_Left
+</SPAN></I><SPAN  STYLE="font-size: 8pt ; ">, LONG </SPAN><I><SPAN  STYLE="font-size: 8pt ; ">param_Top</SPAN></I><SPAN  STYLE="font-size: 8pt ; ">,
+LONG </SPAN><I><SPAN  STYLE="font-size: 8pt ; ">param_Width</SPAN></I><SPAN  STYLE="font-size: 8pt ; ">,
+LONG </SPAN><I><SPAN  STYLE="font-size: 8pt ; ">param_Height</SPAN></I><SPAN  STYLE="font-size: 8pt ; ">,
+UNSIGNED </SPAN><I><SPAN  STYLE="font-size: 8pt ; ">param_Handle</SPAN></I><SPAN  STYLE="font-size: 8pt ; ">,
+BOOL </SPAN><I><SPAN  STYLE="font-size: 8pt ; ">param_bFocus</SPAN></I><B><I> </I></B><B>)</B></P>
+<P CLASS="Base" STYLE="font-size: 11pt ; margin: 10pt  0pt  1px  144pt ; text-indent: -144pt ; font-family: segoe ui semilight,sans-serif; ">
+<B>CreateDTPicker</B>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Creates a DateTimePicker control with the specified dimensions.</P>
+<P CLASS="Base" STYLE="font-size: 11pt ; margin: 0pt  0pt  1px  144pt ; text-indent: -144pt ; font-family: segoe ui semilight,sans-serif; ">
+&nbsp;</P>
+<P CLASS="Base" STYLE="font-size: 11pt ; margin: 0pt  0pt  1px  144pt ; text-indent: -144pt ; font-family: segoe ui semilight,sans-serif; ">
+<I>param_Left
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</I>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Specifies the initial horizontal position of the control.  <I>param_Left</I>
+is the x-coordinate of the upper-left corner of the control relative to the upper-left corner of the parent
+window's client area.</P>
+<P CLASS="Base" STYLE="font-size: 11pt ; margin: 0pt  0pt  1px  144pt ; text-indent: -144pt ; font-family: segoe ui semilight,sans-serif; ">
+&nbsp;&nbsp;</P>
+<P CLASS="Base" STYLE="font-size: 11pt ; margin: 0pt  0pt  1px  144pt ; text-indent: -144pt ; font-family: segoe ui semilight,sans-serif; ">
+<I>param_Top
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</I><SPAN  STYLE="font-size: 11pt ; font-family: segoe ui semilight,sans-serif; ">Specifies
+the initial vertical position of the control.  </SPAN><I>param_Top</I> is the initial y-coordinate of
+the upper-left corner of the control relative to the upper-left corner of the parent window's client area.
+</P>
+<P CLASS="Base" STYLE="font-size: 11pt ; margin: 0pt  0pt  1px  144pt ; text-indent: -144pt ; font-family: segoe ui semilight,sans-serif; ">
+&nbsp;&nbsp;</P>
+<P CLASS="Base" STYLE="font-size: 11pt ; margin: 0pt  0pt  1px  144pt ; text-indent: -144pt ; font-family: segoe ui semilight,sans-serif; ">
+<I>param_Width</I>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Specifies the width, in device units, of the control. </P>
+<P CLASS="Base" STYLE="font-size: 11pt ; margin: 0pt  0pt  1px  144pt ; text-indent: -144pt ; font-family: segoe ui semilight,sans-serif; ">
+&nbsp;&nbsp;</P>
+<P CLASS="Base" STYLE="font-size: 11pt ; margin: 0pt  0pt  1px  144pt ; text-indent: -144pt ; font-family: segoe ui semilight,sans-serif; ">
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If <I>param_Width</I> is 0 (zero),  the <I>param_Width</I> is defaulted
+to 200.</P>
+<P CLASS="Base" STYLE="font-size: 11pt ; margin: 0pt  0pt  1px  144pt ; text-indent: -144pt ; font-family: segoe ui semilight,sans-serif; ">
+&nbsp;&nbsp;</P>
+<P CLASS="Base" STYLE="font-size: 11pt ; margin: 0pt  0pt  1px  144pt ; text-indent: -144pt ; font-family: segoe ui semilight,sans-serif; ">
+<I>param_Height</I>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Specifies the height, in device units, of the control.</P>
+<P CLASS="Base" STYLE="font-size: 11pt ; margin: 0pt  0pt  1px  144pt ; text-indent: -144pt ; font-family: segoe ui semilight,sans-serif; ">
+&nbsp;</P>
+<P CLASS="Base" STYLE="font-size: 11pt ; margin: 0pt  0pt  1px  144pt ; text-indent: -144pt ; font-family: segoe ui semilight,sans-serif; ">
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If <I>param_Height</I> is 0 (zero),  the <I>param_Height</I> is defaulted
+to 10.</P>
+<P CLASS="Base" STYLE="font-size: 11pt ; margin: 0pt  0pt  1px  144pt ; text-indent: -144pt ; font-family: segoe ui semilight,sans-serif; ">
+&nbsp;</P>
+<P CLASS="Base" STYLE="font-size: 11pt ; margin: 0pt  0pt  1px  144pt ; text-indent: -144pt ; font-family: segoe ui semilight,sans-serif; ">
+<I>param_Handle</I>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Specifies the Window Handle of the control that the DateTimePicker control
+will follow in the dialog tabbing order.</P>
+<P CLASS="Base" STYLE="font-size: 11pt ; margin: 0pt  0pt  1px  144pt ; text-indent: -144pt ; font-family: segoe ui semilight,sans-serif; ">
+&nbsp;</P>
+<P CLASS="Base" STYLE="font-size: 11pt ; margin: 0pt  0pt  1px  144pt ; text-indent: -144pt ; font-family: segoe ui semilight,sans-serif; ">
+<I>param_bFocus
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</I>If <B><SPAN  STYLE="font-size: 8pt ; ">TRUE</SPAN></B>, the control
+will be given focus.</P>
+<P CLASS="Base">
+&nbsp;&nbsp;</P>
+<P CLASS="Base">
+Return Value
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;True.</P>
+<P CLASS="Base">
+&nbsp;</P>
+<P CLASS="Base">
+The following style properties can be set prior to calling this method:</P>
+<UL><LI><P CLASS="Bullet1" STYLE="font-size: 11pt ; margin: 0.028in  0pt  1px  0pt; font-family: segoe ui semilight,sans-serif; "><A HREF="SetAppCanParse.htm">AppCanParse</A></P></LI>
+<LI><P CLASS="Bullet1" STYLE="font-size: 11pt ; margin: 0.028in  0pt  1px  0pt; font-family: segoe ui semilight,sans-serif; "><A HREF="SetDisplayFormat.htm">DisplayFormat</A></P></LI>
+<LI><P CLASS="Bullet1" STYLE="font-size: 11pt ; margin: 0.028in  0pt  1px  0pt; font-family: segoe ui semilight,sans-serif; "><A HREF="SetShowNone.htm">ShowNone</A></P></LI>
+<LI><P CLASS="Bullet1" STYLE="font-size: 11pt ; margin: 0.028in  0pt  1px  0pt; font-family: segoe ui semilight,sans-serif; "><A HREF="SetUpDown.htm">UpDown</A></P></LI>
+<LI><P CLASS="Bullet1" STYLE="font-size: 11pt ; margin: 0.028in  0pt  1px  0pt; font-family: segoe ui semilight,sans-serif; "><A HREF="SetRightAlign.htm">RightAlign</A></P></LI></UL>
+<P CLASS="Base" STYLE="font-size: 11pt ; margin: 0pt  0pt  1px  144pt ; text-indent: -144pt ; font-family: segoe ui semilight,sans-serif; ">
+&nbsp;</P>
+<P CLASS="Base" STYLE="font-size: 11pt ; margin: 0pt  0pt  1px  144pt ; text-indent: -144pt ; font-family: segoe ui semilight,sans-serif; ">
+<B>See Also:</B>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<A HREF="Refresh.htm">Refresh</A></P>
+<P CLASS="Base" STYLE="font-size: 11pt ; margin: 0pt  0pt  1px  144pt ; text-indent: -144pt ; font-family: segoe ui semilight,sans-serif; ">
+<A HREF="SetShowNone.htm">ShowNone</A></P>
+</BODY></HTML>

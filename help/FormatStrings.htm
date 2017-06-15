@@ -1,0 +1,137 @@
+<HTML><HEAD><TITLE>FormatStrings</TITLE>
+<META NAME="GENERATOR" CONTENT="ForeHTML Pro 5.0">
+<LINK REL="STYLESHEET" TYPE="text/css" HREF="DTPicker.css">
+
+</HEAD>
+
+<BODY>
+
+<P CLASS="BannerBase">
+Format Strings</P><HR>
+<P CLASS="Base">
+<B><SPAN  STYLE="font-size: 14pt ; ">Format Strings</SPAN></B></P>
+<P CLASS="Base">
+A DateTimePicker format string consists of a series of elements that represent a particular piece of information
+and define its display format. The elements will be displayed in the order they appear in the format string.</P>
+<P CLASS="Base">
+&nbsp;&nbsp;</P>
+<P CLASS="Base">
+Date and time format elements will be replaced by the actual date and time.  They are defined by the following
+groups of characters:</P>
+<P CLASS="Base">
+&nbsp;</P><TABLE CELLPADDING="2">
+<TR><TD WIDTH="68" VALIGN="CENTER">
+<P CLASS="Base">
+<B>Element</B></P></TD><TD WIDTH="571" VALIGN="CENTER">
+<P CLASS="Base">
+<B>Description </B></P></TD></TR>
+<TR><TD WIDTH="68" VALIGN="CENTER">
+<P CLASS="Base">
+&quot;d&quot; </P></TD><TD WIDTH="571" VALIGN="CENTER">
+<P CLASS="Base">
+The one- or two-digit day.</P></TD></TR>
+<TR><TD WIDTH="68" VALIGN="CENTER">
+<P CLASS="Base">
+&quot;dd&quot; </P></TD><TD WIDTH="571" VALIGN="CENTER">
+<P CLASS="Base">
+The two-digit day. Single-digit day values are preceded by a zero.</P></TD></TR>
+<TR><TD WIDTH="68" VALIGN="CENTER">
+<P CLASS="Base">
+&quot;ddd&quot; </P></TD><TD WIDTH="571" VALIGN="CENTER">
+<P CLASS="Base">
+The three-character weekday abbreviation.</P></TD></TR>
+<TR><TD WIDTH="68" VALIGN="CENTER">
+<P CLASS="Base">
+&quot;dddd&quot; </P></TD><TD WIDTH="571" VALIGN="CENTER">
+<P CLASS="Base">
+The full weekday name.</P></TD></TR>
+<TR><TD WIDTH="68" VALIGN="CENTER">
+<P CLASS="Base">
+&quot;h&quot; </P></TD><TD WIDTH="571" VALIGN="CENTER">
+<P CLASS="Base">
+The one- or two-digit hour in 12-hour format.</P></TD></TR>
+<TR><TD WIDTH="68" VALIGN="CENTER">
+<P CLASS="Base">
+&quot;hh&quot; </P></TD><TD WIDTH="571" VALIGN="CENTER">
+<P CLASS="Base">
+The two-digit hour in 12-hour format. Single-digit values are preceded by a zero.</P></TD></TR>
+<TR><TD WIDTH="68" VALIGN="CENTER">
+<P CLASS="Base">
+&quot;H&quot; </P></TD><TD WIDTH="571" VALIGN="CENTER">
+<P CLASS="Base">
+The one- or two-digit hour in 24-hour format.</P></TD></TR>
+<TR><TD WIDTH="68" VALIGN="CENTER">
+<P CLASS="Base">
+&quot;HH&quot; </P></TD><TD WIDTH="571" VALIGN="CENTER">
+<P CLASS="Base">
+The two-digit hour in 24-hour format. Single-digit values are preceded by a zero.</P></TD></TR>
+<TR><TD WIDTH="68" VALIGN="CENTER">
+<P CLASS="Base">
+&quot;m&quot; </P></TD><TD WIDTH="571" VALIGN="CENTER">
+<P CLASS="Base">
+The one- or two-digit minute.</P></TD></TR>
+<TR><TD WIDTH="68" VALIGN="CENTER">
+<P CLASS="Base">
+&quot;mm&quot; </P></TD><TD WIDTH="571" VALIGN="CENTER">
+<P CLASS="Base">
+The two-digit minute. Single-digit values are preceded by a zero.</P></TD></TR>
+<TR><TD WIDTH="68" VALIGN="CENTER">
+<P CLASS="Base">
+&quot;M&quot; </P></TD><TD WIDTH="571" VALIGN="CENTER">
+<P CLASS="Base">
+The one- or two-digit month number.</P></TD></TR>
+<TR><TD WIDTH="68" VALIGN="CENTER">
+<P CLASS="Base">
+&quot;MM&quot; </P></TD><TD WIDTH="571" VALIGN="CENTER">
+<P CLASS="Base">
+The two-digit month number. Single-digit values are preceded by a zero.</P></TD></TR>
+<TR><TD WIDTH="68" VALIGN="CENTER">
+<P CLASS="Base">
+&quot;MMM&quot; </P></TD><TD WIDTH="571" VALIGN="CENTER">
+<P CLASS="Base">
+The three-character month abbreviation.</P></TD></TR>
+<TR><TD WIDTH="68" VALIGN="CENTER">
+<P CLASS="Base">
+&quot;MMMM&quot; </P></TD><TD WIDTH="571" VALIGN="CENTER">
+<P CLASS="Base">
+The full month name.</P></TD></TR>
+<TR><TD WIDTH="68" VALIGN="CENTER">
+<P CLASS="Base">
+&quot;t&quot; </P></TD><TD WIDTH="571" VALIGN="CENTER">
+<P CLASS="Base">
+The one-letter AM/PM abbreviation (that is, AM is displayed as &quot;A&quot;).</P></TD></TR>
+<TR><TD WIDTH="68" VALIGN="CENTER">
+<P CLASS="Base">
+&quot;tt&quot; </P></TD><TD WIDTH="571" VALIGN="CENTER">
+<P CLASS="Base">
+The two-letter AM/PM abbreviation (that is, AM is displayed as &quot;AM&quot;).</P></TD></TR>
+<TR><TD WIDTH="68" VALIGN="CENTER">
+<P CLASS="Base">
+&quot;yy&quot; </P></TD><TD WIDTH="571" VALIGN="CENTER">
+<P CLASS="Base">
+The last two digits of the year (that is, 1996 would be displayed as &quot;96&quot;).</P></TD></TR>
+<TR><TD WIDTH="68" VALIGN="CENTER">
+<P CLASS="Base">
+&quot;yyyy&quot; </P></TD><TD WIDTH="571" VALIGN="CENTER">
+<P CLASS="Base">
+The full year (that is, 1996 would be displayed as &quot;1996&quot;).</P></TD></TR></TABLE>
+
+<P CLASS="Base">
+&nbsp;</P>
+<P CLASS="Base">
+To make the information more readable, you can add body text to the format string by enclosing it in single
+quotes. Spaces and punctuation marks do not need to be quoted.</P>
+<P CLASS="Base">
+&nbsp;&nbsp;</P>
+<P CLASS="Base">
+<IMG SRC="helpnote.gif" ALT="helpnote.gif" WIDTH="48" HEIGHT="24" ALIGN="BASELINE" BORDER="0">Nonformat
+characters that are not delimited by single quotes will result in unpredictable display by the DTP control.</P>
+<P CLASS="Base">
+&nbsp;</P>
+<P CLASS="Base">
+For example, to display the current date with the format &quot;'Today is: 04:22:31 Tuesday Mar 23, 1996&quot;,
+the format string is &quot;'Today is: 'hh':'m':'s dddd MMM dd', 'yyyy&quot;. To include a single quote
+in your body text, use two consecutive single quotes. For example, &quot;'Don''t forget' MMM dd',' yyyy&quot;
+produces output that looks like: Don't forget Mar 23, 1996. It is not necessary to use quotes with the
+comma, so &quot;'Don''t forget' MMM dd, yyyy&quot; is also valid, and produces the same output.</P>
+</BODY></HTML>

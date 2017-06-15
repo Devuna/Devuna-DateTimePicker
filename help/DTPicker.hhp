@@ -1,0 +1,91 @@
+
+[OPTIONS]
+Error log file=DTPicker.log
+Language=0x0409
+Compiled file=DTPicker.chm
+Default Topic=Contents.htm
+Default Window=default
+Display compile progress=No
+Display compile notes=No
+Enhanced decompilation=Yes
+Binary TOC=No
+Binary Index=No
+Full text search stop list file=stoplist.stp
+Full-text search=Yes
+Flat=No
+Index file=DateTimePicker.hhk
+Contents file=DateTimePicker.hhc
+TITLE=DTPicker
+
+[FILES]
+GetSelection.htm
+SetAppCanParse.htm
+GetBackgroundColor.htm
+SetCalendarTitleForeColor.htm
+SetDisplayFormat.htm
+SystemTimeToLong.htm
+KCR_DateTimePicker.htm
+GetColor.htm
+SetCalendarBackColor.htm
+ClearSelection.htm
+ShowNone.htm
+Refresh.htm
+CreateDTPicker.htm
+Visible.htm
+SetRightAlign.htm
+RightAlign.htm
+Contents.htm
+SetRange.htm
+Kill.htm
+SetFormat.htm
+LongToSystemTime.htm
+GetCalendarTrailingForeColor.htm
+GetCalendarForeColor.htm
+SetCalendarTitleBackColor.htm
+SetShowNone.htm
+FormatStrings.htm
+KCR_DateTimePickerClass.htm
+Introduction.htm
+Init.htm
+UpDown.htm
+SetCustomFormat.htm
+SetCalendarTrailingForeColor.htm
+SetBackgroundColor.htm
+SetUpDown.htm
+LOCALE_SSHORTDATE.htm
+CustomFormat.htm
+KCR_DateTimeControl.htm
+GetCalendarTitleForeColor.htm
+SetColor.htm
+SetFont_.htm
+SetFont.htm
+GetHwnd.htm
+SetMCFont_.htm
+KCR_SubClassClientWindow.htm
+AppCanParse.htm
+GetCalendarBackColor.htm
+DateTimePickerHwnd.htm
+SetSelection.htm
+SetCalendarForeColor.htm
+LOCALE_SLONGDATE.htm
+SetMCFont.htm
+GetCalendarTitleBackColor.htm
+GetRange.htm
+DTS_SHOWNONE.htm
+SetVisible.htm
+LOCALE_STIMEFORMAT.htm
+DisplayFormat.htm
+DTPicker.css
+datetimepicker.gif
+properties.gif
+exclamation.gif
+control.gif
+helpnote.gif
+
+[MAP]
+
+[ALIAS]
+
+[WINDOWS]
+default= "DTPicker","DateTimePicker.hhc","DateTimePIcker.hhk",,,,,,,9248,200,12294,[100,100,600,600],12845056,0,1,0,0,0
+

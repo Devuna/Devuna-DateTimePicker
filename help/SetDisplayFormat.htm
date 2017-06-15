@@ -1,0 +1,101 @@
+<HTML><HEAD><TITLE>SetDisplayFormat</TITLE>
+<META NAME="GENERATOR" CONTENT="ForeHTML Pro 5.0">
+<LINK REL="STYLESHEET" TYPE="text/css" HREF="DTPicker.css">
+
+</HEAD>
+
+<BODY>
+
+<P CLASS="BannerBase">
+SetDisplayFormat (set the DisplayFormat property)</P><HR>
+<P CLASS="Base" STYLE="font-size: 11pt ; margin: 0pt  0pt  1px  144pt ; text-indent: -144pt ; font-family: segoe ui semilight,sans-serif; ">
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>SetDisplayFormat(</B> <SPAN  STYLE="font-size: 8pt ; ">LONG </SPAN><I><SPAN  STYLE="font-size: 8pt ; ">param_lFormat</SPAN></I>
+<B>)</B></P>
+<P CLASS="Base" STYLE="font-size: 11pt ; margin: 10pt  0pt  1px  144pt ; text-indent: -144pt ; font-family: segoe ui semilight,sans-serif; ">
+<B>SetDisplayFormat</B>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sets the <A HREF="DisplayFormat.htm">DisplayFormat</A> property for
+the control.  The DisplayFormat property is used by the <A HREF="CreateDTPicker.htm">CreateDTPicker</A>
+method.</P>
+<P CLASS="Base" STYLE="font-size: 11pt ; margin: 0pt  0pt  1px  144pt ; text-indent: -144pt ; font-family: segoe ui semilight,sans-serif; ">
+&nbsp;</P>
+<P CLASS="Base" STYLE="font-size: 11pt ; margin: 0pt  0pt  1px  144pt ; text-indent: -144pt ; font-family: segoe ui semilight,sans-serif; ">
+<I>param_lFormat</I>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This parameter specifies the initial display format to use when creating
+the control.</P>
+<P CLASS="Base" STYLE="font-size: 11pt ; margin: 0pt  0pt  1px  144pt ; text-indent: -144pt ; font-family: segoe ui semilight,sans-serif; ">
+&nbsp;</P>
+<P CLASS="Base" STYLE="font-size: 11pt ; margin: 0pt  0pt  1px  72pt ; text-indent: -72pt ; font-family: segoe ui semilight,sans-serif; ">
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The <I>param_lFormat</I> parameter must be set to one of the following
+EQUATEs defined in DateTimePick.inc:</P>
+<P CLASS="Base" STYLE="font-size: 11pt ; margin: 0pt  0pt  1px  72pt ; text-indent: -72pt ; font-family: segoe ui semilight,sans-serif; ">
+&nbsp;</P>
+<P CLASS="Base">
+<B><SPAN  STYLE="font-size: 8pt ; font-family: Courier New,sans-serif; ">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DTPLONGDATE
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;EQUATE(0)</SPAN></B></P>
+<P CLASS="Base" STYLE="font-size: 11pt ; margin: 0pt  0pt  1px  72pt ; text-indent: -72pt ; font-family: segoe ui semilight,sans-serif; ">
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Displays the date in long format. The default format string for this style
+is defined by <B><SPAN  STYLE="font-size: 8pt ; ">LOCALE_SLONGDATE</SPAN></B>,
+which produces output like &quot;Friday, April 19, 1996&quot;.</P>
+<P CLASS="Base" STYLE="font-size: 11pt ; margin: 0pt  0pt  1px  108pt ; text-indent: -108pt ; font-family: segoe ui semilight,sans-serif; ">
+&nbsp;</P>
+<P CLASS="Base">
+<B><SPAN  STYLE="font-size: 8pt ; font-family: Courier New,sans-serif; ">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DTPSHORTDATE  EQUATE(1)</SPAN></B></P>
+<P CLASS="Base" STYLE="font-size: 11pt ; margin: 0pt  0pt  1px  72pt ; text-indent: -72pt ; font-family: segoe ui semilight,sans-serif; ">
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Displays the date in short format. The default format string for this style
+is defined by <B><SPAN  STYLE="font-size: 8pt ; ">LOCALE_SSHORTDATE</SPAN></B>,
+which produces output like &quot;4/19/96&quot;.</P>
+<P CLASS="Base" STYLE="font-size: 11pt ; margin: 0pt  0pt  1px  144pt ; text-indent: -144pt ; font-family: segoe ui semilight,sans-serif; ">
+&nbsp;</P>
+<P CLASS="Base">
+<B><SPAN  STYLE="font-size: 8pt ; font-family: Courier New,sans-serif; ">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DTPTIME       EQUATE(2)</SPAN></B></P>
+<P CLASS="Base" STYLE="font-size: 11pt ; margin: 0pt  0pt  1px  72pt ; text-indent: -72pt ; font-family: segoe ui semilight,sans-serif; ">
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Displays the time. The default format string for this style is defined by
+<B><SPAN  STYLE="font-size: 8pt ; ">LOCALE_STIMEFORMAT</SPAN></B>,
+which produces output like &quot;5:31:42 PM&quot;.</P>
+<P CLASS="Base" STYLE="font-size: 11pt ; margin: 0pt  0pt  1px  144pt ; text-indent: -144pt ; font-family: segoe ui semilight,sans-serif; ">
+&nbsp;</P>
+<P CLASS="Base">
+<B><SPAN  STYLE="font-size: 8pt ; font-family: Courier New,sans-serif; ">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DTPCUSTOM     EQUATE(3)</SPAN></B></P>
+<P CLASS="Base" STYLE="font-size: 11pt ; margin: 0pt  0pt  1px  72pt ; text-indent: -72pt ; font-family: segoe ui semilight,sans-serif; ">
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sets the display of a DateTimePicker control based on the <A HREF="CustomFormat.htm">CustomFormat</A>
+property.</P>
+<P CLASS="Base" STYLE="font-size: 11pt ; margin: 0pt  0pt  1px  72pt ; text-indent: -72pt ; font-family: segoe ui semilight,sans-serif; ">
+&nbsp;</P>
+<P CLASS="Base" STYLE="font-size: 11pt ; margin: 0pt  0pt  1px  72pt ; text-indent: -72pt ; font-family: segoe ui semilight,sans-serif; ">
+<IMG SRC="helpnote.gif" ALT="helpnote.gif" WIDTH="48" HEIGHT="24" ALIGN="BASELINE" BORDER="0">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Be sure to set the CustomFormat property using the <A HREF="SetCustomFormat.htm">SetCustomFormat</A>
+method before calling SetDisplayFormat with the <B><SPAN  STYLE="font-size: 8pt ; font-family: Courier New,sans-serif; ">DTPCUSTOM</SPAN></B>
+format. </P>
+<P CLASS="Base" STYLE="font-size: 11pt ; margin: 0pt  0pt  1px  72pt ; text-indent: -72pt ; font-family: segoe ui semilight,sans-serif; ">
+&nbsp;</P>
+<P CLASS="Base" STYLE="font-size: 11pt ; margin: 0pt  0pt  1px  72pt ; text-indent: -72pt ; font-family: segoe ui semilight,sans-serif; ">
+&nbsp;</P>
+<P CLASS="Base" STYLE="font-size: 11pt ; margin: 0pt  0pt  1px  144pt ; text-indent: -144pt ; font-family: segoe ui semilight,sans-serif; ">
+Return Value
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Previous DisplayFormat on success or -1 if <I>param_lFormat</I> is invalid.</P>
+
+</BODY></HTML>

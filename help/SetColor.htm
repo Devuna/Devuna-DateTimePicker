@@ -1,0 +1,104 @@
+<HTML><HEAD><TITLE>SetColor</TITLE>
+<META NAME="GENERATOR" CONTENT="ForeHTML Pro 5.0">
+<LINK REL="STYLESHEET" TYPE="text/css" HREF="DTPicker.css">
+
+</HEAD>
+
+<BODY>
+
+<P CLASS="BannerBase">
+SetColor (set a calendar color)</P><HR>
+<P CLASS="Base" STYLE="font-size: 11pt ; margin: 0pt  0pt  1px  144pt ; text-indent: -144pt ; font-family: segoe ui semilight,sans-serif; ">
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>SetColor( </B><SPAN  STYLE="font-size: 8pt ; ">LONG </SPAN><I><SPAN  STYLE="font-size: 8pt ; ">param_iColor</SPAN></I><SPAN  STYLE="font-size: 8pt ; ">,
+LONG </SPAN><I><SPAN  STYLE="font-size: 8pt ; ">param_Clr</SPAN></I><SPAN  STYLE="font-size: 8pt ; ">
+</SPAN><B>)</B></P>
+<P CLASS="Base" STYLE="font-size: 11pt ; margin: 10pt  0pt  1px  144pt ; text-indent: -144pt ; font-family: segoe ui semilight,sans-serif; ">
+<B>SetColor</B>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sets the color for a given portion of the month calendar within a DateTimePicker
+control.</P>
+<P CLASS="Base" STYLE="font-size: 11pt ; margin: 0pt  0pt  1px  108pt ; text-indent: -108pt ; font-family: segoe ui semilight,sans-serif; ">
+&nbsp;</P>
+<P CLASS="Base" STYLE="font-size: 11pt ; margin: 0pt  0pt  1px  144pt ; text-indent: -144pt ; font-family: segoe ui semilight,sans-serif; ">
+<I>param_iColor
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</I>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Value specifying which month calendar color to set. </P>
+<P CLASS="Base" STYLE="font-size: 11pt ; margin: 0pt  0pt  1px  144pt ; text-indent: -144pt ; font-family: segoe ui semilight,sans-serif; ">
+&nbsp;</P>
+<P CLASS="Base" STYLE="font-size: 11pt ; margin: 0pt  0pt  1px  144pt ; text-indent: -144pt ; font-family: segoe ui semilight,sans-serif; ">
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The following EQUATEs are in DateTimePick.inc:</P>
+<P CLASS="Base" STYLE="font-size: 11pt ; margin: 0pt  0pt  1px  144pt ; text-indent: -144pt ; font-family: segoe ui semilight,sans-serif; ">
+&nbsp;</P>
+<P CLASS="Base" STYLE="font-size: 11pt ; margin: 0pt  0pt  1px  144pt ; text-indent: -144pt ; font-family: segoe ui semilight,sans-serif; ">
+<B><SPAN  STYLE="font-size: 8pt ; ">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MCSC_BACKGROUND</SPAN></B>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Set the background color displayed between months.</P>
+<P CLASS="Base" STYLE="font-size: 11pt ; margin: 0pt  0pt  1px  144pt ; text-indent: -144pt ; font-family: segoe ui semilight,sans-serif; ">
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B><SPAN  STYLE="font-size: 8pt ; ">MCSC_MONTHBK
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN></B>Set the background color displayed within the month.</P>
+<P CLASS="Base" STYLE="font-size: 11pt ; margin: 0pt  0pt  1px  144pt ; text-indent: -144pt ; font-family: segoe ui semilight,sans-serif; ">
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B><SPAN  STYLE="font-size: 8pt ; ">MCSC_TEXT
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN></B>Set the color used to display text within a month.</P>
+<P CLASS="Base" STYLE="font-size: 11pt ; margin: 0pt  0pt  1px  144pt ; text-indent: -144pt ; font-family: segoe ui semilight,sans-serif; ">
+<B><SPAN  STYLE="font-size: 8pt ; ">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MCSC_TITLEBK
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN></B>Set the background color displayed in the calendar's title.</P>
+<P CLASS="Base" STYLE="font-size: 11pt ; margin: 0pt  0pt  1px  144pt ; text-indent: -144pt ; font-family: segoe ui semilight,sans-serif; ">
+<B><SPAN  STYLE="font-size: 8pt ; ">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MCSC_TITLETEXT
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN></B>Set the color used to display text within the calendar's title.</P>
+<P CLASS="Base" STYLE="font-size: 11pt ; margin: 0pt  0pt  1px  144pt ; text-indent: -144pt ; font-family: segoe ui semilight,sans-serif; ">
+<B><SPAN  STYLE="font-size: 8pt ; ">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MCSC_TRAILINGTEXT
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN></B>Set the color used to display header day and trailing day text.
+Header and trailing days are the days from the previous and following months that appear on the current
+month calendar.</P>
+<P CLASS="Base" STYLE="font-size: 11pt ; margin: 0pt  0pt  1px  144pt ; text-indent: -144pt ; font-family: segoe ui semilight,sans-serif; ">
+&nbsp;&nbsp;</P>
+<P CLASS="Base">
+<I>param_Clr</I>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The RGB color value.</P>
+<P CLASS="Base" STYLE="font-size: 11pt ; margin: 0pt  0pt  1px  144pt ; text-indent: -144pt ; font-family: segoe ui semilight,sans-serif; ">
+&nbsp;</P>
+<P CLASS="Base" STYLE="font-size: 11pt ; margin: 0pt  0pt  1px  144pt ; text-indent: -144pt ; font-family: segoe ui semilight,sans-serif; ">
+Return Value
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;previous color if successful, or -1 if unsuccessful.</P>
+<P CLASS="Base" STYLE="font-size: 11pt ; margin: 0pt  0pt  1px  144pt ; text-indent: -144pt ; font-family: segoe ui semilight,sans-serif; ">
+&nbsp;</P>
+<P CLASS="Base" STYLE="font-size: 11pt ; margin: 0pt  0pt  1px  144pt ; text-indent: -144pt ; font-family: segoe ui semilight,sans-serif; ">
+<B>See Also:</B>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<A HREF="SetBackgroundColor.htm">SetBackgroundColor</A></P>
+<P CLASS="Base" STYLE="font-size: 11pt ; margin: 0pt  0pt  1px  144pt ; text-indent: -144pt ; font-family: segoe ui semilight,sans-serif; ">
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<A HREF="SetCalendarBackColor.htm">SetCalendarBackColor</A></P>
+<P CLASS="Base" STYLE="font-size: 11pt ; margin: 0pt  0pt  1px  144pt ; text-indent: -144pt ; font-family: segoe ui semilight,sans-serif; ">
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<A HREF="SetCalendarForeColor.htm">SetCalendarForeColor</A></P>
+<P CLASS="Base" STYLE="font-size: 11pt ; margin: 0pt  0pt  1px  144pt ; text-indent: -144pt ; font-family: segoe ui semilight,sans-serif; ">
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<A HREF="SetCalendarTitleBackColor.htm">SetCalendarTitleBackColor</A></P>
+<P CLASS="Base" STYLE="font-size: 11pt ; margin: 0pt  0pt  1px  144pt ; text-indent: -144pt ; font-family: segoe ui semilight,sans-serif; ">
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<A HREF="SetCalendarTitleForeColor.htm">SetCalendarTitleForeColor</A></P>
+<P CLASS="Base" STYLE="font-size: 11pt ; margin: 0pt  0pt  1px  144pt ; text-indent: -144pt ; font-family: segoe ui semilight,sans-serif; ">
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<A HREF="SetCalendarTrailingForeColor.htm">SetCalendarTrailingForeColor</A></P>
+</BODY></HTML>
