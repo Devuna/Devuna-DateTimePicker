@@ -473,14 +473,6 @@ INSTANCE 4
 %sendMessage LONG  (1)
 %setWindowLong LONG  (1)
 %getWindowLong LONG  (1)
-[ADDITION]
-NAME GenTXA GenerateTXA
-[INSTANCE]
-INSTANCE 1
-[PROMPTS]
-%GenAPP LONG  (0)
-%GenDCTX LONG  (0)
-%GenAPPSLG LONG  (1)
 [PERSIST]
 %SaveCreateLocalMap DEFAULT  ('1')
 %GenerationCompleted DEPEND %Module DEFAULT TIMES 2
@@ -502,7 +494,7 @@ WHEN  ('dtpicker001.clw') ('1')
 [PROGRAM]
 [COMMON]
 FROM ABC ABC
-MODIFIED '2017/06/13' '18:09:31'
+MODIFIED '2017/06/16' '15:44:58'
 [EMBED]
 EMBED %BeforeGlobalIncludes
 [DEFINITION]
@@ -528,7 +520,7 @@ PROPERTY:END
 !    GNU General Public License for more details.
 !
 !    You should have received a copy of the GNU General Public License
-!    along with this file.  If not, see <http://www.gnu.org/licenses/>.
+!    along with Devuna-DateTimePicker.  If not, see <http://www.gnu.org/licenses/>.
 ! ================================================================================
 !endRegion
 [SOURCE]
@@ -545,7 +537,7 @@ TimePickerChanged EQUATE
 [MODULE]
 [COMMON]
 FROM ABC GENERATED
-MODIFIED '2017/06/13' '18:09:49'
+MODIFIED '2017/06/16' '15:45:19'
 [EMBED]
 EMBED %StartOfModule
 [DEFINITION]
@@ -571,7 +563,7 @@ PROPERTY:END
 !    GNU General Public License for more details.
 !
 !    You should have received a copy of the GNU General Public License
-!    along with this file.  If not, see <http://www.gnu.org/licenses/>.
+!    along with Devuna-DateTimePicker.  If not, see <http://www.gnu.org/licenses/>.
 ! ================================================================================
 !endRegion
 [END]
@@ -580,7 +572,7 @@ PROPERTY:END
 NAME Main
 [COMMON]
 FROM ABC Window
-MODIFIED '2017/06/13' '18:12:47'
+MODIFIED '2017/06/16' '15:45:30'
 [DATA]
 [SCREENCONTROLS]
 ! PROMPT('Files Opened:'),USE(?FilesOpened:Prompt)
@@ -687,13 +679,7 @@ WHEN  ('WindowToolbar') ('ToolbarClass')
 WHEN  ('Default') ('')
 WHEN  ('WindowToolbar') ('')
 
-%ClassLines DEPEND %ClassItem MULTI DEFAULT TIMES 1
-WHEN  ('Default') ('Ask {20}PROCEDURE(),DERIVED', 'ChangeAction {11}PROCEDURE(),BYTE,DERIVED', |
-  'Open {19}PROCEDURE(),DERIVED', 'PrimeUpdate {12}PROCEDURE(),BYTE,PROC,DERIVED', |
-  'Reset {18}PROCEDURE(BYTE Force=0),DERIVED', 'Run {20}PROCEDURE(),BYTE,PROC,DERIVED', |
-  'SetAlerts {14}PROCEDURE(),DERIVED', 'TakeAccepted {11}PROCEDURE(),BYTE,PROC,DERIVED', |
-  'TakeDisableButton      PROCEDURE(SIGNED Control,BYTE MakeDisable),DERIVED', 'TakeEvent {14}PROCEDURE(),BYTE,PROC,DERIVED', |
-  'Update {17}PROCEDURE(),DERIVED')
+%ClassLines DEPEND %ClassItem MULTI DEFAULT TIMES 0
 
 %ReturnValue FIELD  ()
 %WindowOperationMode DEFAULT  ('Use WINDOW setting')
@@ -1472,7 +1458,7 @@ PROPERTY:END
 !    GNU General Public License for more details.
 !
 !    You should have received a copy of the GNU General Public License
-!    along with this file.  If not, see <http://www.gnu.org/licenses/>.
+!    along with Devuna-DateTimePicker.  If not, see <http://www.gnu.org/licenses/>.
 ! ================================================================================
 !endRegion
 [END]

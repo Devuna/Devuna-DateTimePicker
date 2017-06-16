@@ -1,7 +1,7 @@
 [PROGRAM]
 [COMMON]
 FROM ABC ABC
-MODIFIED '2017/06/13' '18:09:31'
+MODIFIED '2017/06/16' '15:44:58'
 [EMBED]
 EMBED %BeforeGlobalIncludes
 [DEFINITION]
@@ -27,7 +27,7 @@ PROPERTY:END
 !    GNU General Public License for more details.
 !
 !    You should have received a copy of the GNU General Public License
-!    along with this file.  If not, see <http://www.gnu.org/licenses/>.
+!    along with Devuna-DateTimePicker.  If not, see <http://www.gnu.org/licenses/>.
 ! ================================================================================
 !endRegion
 [SOURCE]
