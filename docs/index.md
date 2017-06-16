@@ -17,11 +17,13 @@ libsrc/win - SoftVelocity/Clarion10/Accessory/libsrc/win
 template/win - SoftVelocity/Clarion10/Accessory/template/win
 
 # Documentation Contents #
+
 --------
 
-* [Properties] ***Coming Soon*** 
+Documentation for the class properties and methods can be found in the Help folder of the repository.  The Help folder contains everything needed to build an HTML_Help file for the DateTimePicker control.
 
-* [Methods] ***Coming Soon*** 
+For detailed information on the control and its use, please see the **[Microsoft Documentation](https://msdn.microsoft.com/en-us/library/aa276346(v=vs.60).aspx)** for the DateTimePIcerControl.
 
-----------
+
+
 
