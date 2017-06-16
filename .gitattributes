@@ -22,7 +22,7 @@
 *.app binary
 *.chm binary
 
-# Declare help as documentation folde
+# Declare help as documentation folder
 help/* linguist-documentation
 
 # Declare languuage association
@@ -36,4 +36,3 @@ help/* linguist-documentation
 *.tpw linguist-language=Clarion
 *.txa linguist-language=Clarion
 *.txd linguist-language=Clarion
-*.htm linguist-language=Clarion
