@@ -12,7 +12,7 @@
 	<UL>
 		<LI><OBJECT TYPE="text/sitemap">
 			<PARAM NAME="Name" VALUE="Introduction">
-			<PARAM NAME="Local" VALUE="Introduction.htm">
+			<PARAM NAME="Local" VALUE="html/Introduction.htm">
 			</OBJECT>
 	</UL></UL>
 <UL>
@@ -22,42 +22,42 @@
 	<UL>
 		<LI><OBJECT TYPE="text/sitemap">
 			<PARAM NAME="Name" VALUE="AppCanParse">
-			<PARAM NAME="Local" VALUE="AppCanParse.htm">
+			<PARAM NAME="Local" VALUE="html/AppCanParse.htm">
 			</OBJECT>
 
 		<LI><OBJECT TYPE="text/sitemap">
 			<PARAM NAME="Name" VALUE="DateTimePickerHwnd">
-			<PARAM NAME="Local" VALUE="DateTimePickerHwnd.htm">
+			<PARAM NAME="Local" VALUE="html/DateTimePickerHwnd.htm">
 			</OBJECT>
 
 		<LI><OBJECT TYPE="text/sitemap">
 			<PARAM NAME="Name" VALUE="CustomFormat">
-			<PARAM NAME="Local" VALUE="CustomFormat.htm">
+			<PARAM NAME="Local" VALUE="html/CustomFormat.htm">
 			</OBJECT>
 
 		<LI><OBJECT TYPE="text/sitemap">
 			<PARAM NAME="Name" VALUE="DisplayFormat">
-			<PARAM NAME="Local" VALUE="DisplayFormat.htm">
+			<PARAM NAME="Local" VALUE="html/DisplayFormat.htm">
 			</OBJECT>
 
 		<LI><OBJECT TYPE="text/sitemap">
 			<PARAM NAME="Name" VALUE="RightAlign">
-			<PARAM NAME="Local" VALUE="RightAlign.htm">
+			<PARAM NAME="Local" VALUE="html/RightAlign.htm">
 			</OBJECT>
 
 		<LI><OBJECT TYPE="text/sitemap">
 			<PARAM NAME="Name" VALUE="ShowNone">
-			<PARAM NAME="Local" VALUE="ShowNone.htm">
+			<PARAM NAME="Local" VALUE="html/ShowNone.htm">
 			</OBJECT>
 
 		<LI><OBJECT TYPE="text/sitemap">
 			<PARAM NAME="Name" VALUE="UpDown">
-			<PARAM NAME="Local" VALUE="UpDown.htm">
+			<PARAM NAME="Local" VALUE="html/UpDown.htm">
 			</OBJECT>
 
 		<LI><OBJECT TYPE="text/sitemap">
 			<PARAM NAME="Name" VALUE="Visible">
-			<PARAM NAME="Local" VALUE="Visible.htm">
+			<PARAM NAME="Local" VALUE="html/Visible.htm">
 			</OBJECT>
 	</UL></UL>
 <UL>
@@ -67,192 +67,192 @@
 	<UL>
 		<LI><OBJECT TYPE="text/sitemap">
 			<PARAM NAME="Name" VALUE="ClearSelection">
-			<PARAM NAME="Local" VALUE="ClearSelection.htm">
+			<PARAM NAME="Local" VALUE="html/ClearSelection.htm">
 			</OBJECT>
 
 		<LI><OBJECT TYPE="text/sitemap">
 			<PARAM NAME="Name" VALUE="CreateDTPicker">
-			<PARAM NAME="Local" VALUE="CreateDTPicker.htm">
+			<PARAM NAME="Local" VALUE="html/CreateDTPicker.htm">
 			</OBJECT>
 
 		<LI><OBJECT TYPE="text/sitemap">
 			<PARAM NAME="Name" VALUE="GetBackgroundColor">
-			<PARAM NAME="Local" VALUE="GetBackgroundColor.htm">
+			<PARAM NAME="Local" VALUE="html/GetBackgroundColor.htm">
 			</OBJECT>
 
 		<LI><OBJECT TYPE="text/sitemap">
 			<PARAM NAME="Name" VALUE="GetCalendarBackColor">
-			<PARAM NAME="Local" VALUE="GetCalendarBackColor.htm">
+			<PARAM NAME="Local" VALUE="html/GetCalendarBackColor.htm">
 			</OBJECT>
 
 		<LI><OBJECT TYPE="text/sitemap">
 			<PARAM NAME="Name" VALUE="GetCalendarForeColor">
-			<PARAM NAME="Local" VALUE="GetCalendarForeColor.htm">
+			<PARAM NAME="Local" VALUE="html/GetCalendarForeColor.htm">
 			</OBJECT>
 
 		<LI><OBJECT TYPE="text/sitemap">
 			<PARAM NAME="Name" VALUE="GetCalendarTitleBackColor">
-			<PARAM NAME="Local" VALUE="GetCalendarTitleBackColor.htm">
+			<PARAM NAME="Local" VALUE="html/GetCalendarTitleBackColor.htm">
 			</OBJECT>
 
 		<LI><OBJECT TYPE="text/sitemap">
 			<PARAM NAME="Name" VALUE="GetCalendarTitleForeColor">
-			<PARAM NAME="Local" VALUE="GetCalendarTitleForeColor.htm">
+			<PARAM NAME="Local" VALUE="html/GetCalendarTitleForeColor.htm">
 			</OBJECT>
 
 		<LI><OBJECT TYPE="text/sitemap">
 			<PARAM NAME="Name" VALUE="GetCalendarTrailingForeColor">
-			<PARAM NAME="Local" VALUE="GetCalendarTrailingForeColor.htm">
+			<PARAM NAME="Local" VALUE="html/GetCalendarTrailingForeColor.htm">
 			</OBJECT>
 
 		<LI><OBJECT TYPE="text/sitemap">
 			<PARAM NAME="Name" VALUE="GetColor">
-			<PARAM NAME="Local" VALUE="GetColor.htm">
+			<PARAM NAME="Local" VALUE="html/GetColor.htm">
 			</OBJECT>
 
 		<LI><OBJECT TYPE="text/sitemap">
 			<PARAM NAME="Name" VALUE="GetHwnd">
-			<PARAM NAME="Local" VALUE="GetHwnd.htm">
+			<PARAM NAME="Local" VALUE="html/GetHwnd.htm">
 			</OBJECT>
 
 		<LI><OBJECT TYPE="text/sitemap">
 			<PARAM NAME="Name" VALUE="GetRange">
-			<PARAM NAME="Local" VALUE="GetRange.htm">
+			<PARAM NAME="Local" VALUE="html/GetRange.htm">
 			</OBJECT>
 
 		<LI><OBJECT TYPE="text/sitemap">
 			<PARAM NAME="Name" VALUE="GetSelection">
-			<PARAM NAME="Local" VALUE="GetSelection.htm">
+			<PARAM NAME="Local" VALUE="html/GetSelection.htm">
 			</OBJECT>
 
 		<LI><OBJECT TYPE="text/sitemap">
 			<PARAM NAME="Name" VALUE="Init">
-			<PARAM NAME="Local" VALUE="Init.htm">
+			<PARAM NAME="Local" VALUE="html/Init.htm">
 			</OBJECT>
 
 		<LI><OBJECT TYPE="text/sitemap">
 			<PARAM NAME="Name" VALUE="Kill">
-			<PARAM NAME="Local" VALUE="Kill.htm">
+			<PARAM NAME="Local" VALUE="html/Kill.htm">
 			</OBJECT>
 
 		<LI><OBJECT TYPE="text/sitemap">
 			<PARAM NAME="Name" VALUE="LongToSystemTime">
-			<PARAM NAME="Local" VALUE="LongToSystemTime.htm">
+			<PARAM NAME="Local" VALUE="html/LongToSystemTime.htm">
 			</OBJECT>
 
 		<LI><OBJECT TYPE="text/sitemap">
 			<PARAM NAME="Name" VALUE="Refresh">
-			<PARAM NAME="Local" VALUE="Refresh.htm">
+			<PARAM NAME="Local" VALUE="html/Refresh.htm">
 			</OBJECT>
 
 		<LI><OBJECT TYPE="text/sitemap">
 			<PARAM NAME="Name" VALUE="SetAppCanParse">
-			<PARAM NAME="Local" VALUE="SetAppCanParse.htm">
+			<PARAM NAME="Local" VALUE="html/SetAppCanParse.htm">
 			</OBJECT>
 
 		<LI><OBJECT TYPE="text/sitemap">
 			<PARAM NAME="Name" VALUE="SetBackgroundColor">
-			<PARAM NAME="Local" VALUE="SetBackgroundColor.htm">
+			<PARAM NAME="Local" VALUE="html/SetBackgroundColor.htm">
 			</OBJECT>
 
 		<LI><OBJECT TYPE="text/sitemap">
 			<PARAM NAME="Name" VALUE="SetCalendarBackColor">
-			<PARAM NAME="Local" VALUE="SetCalendarBackColor.htm">
+			<PARAM NAME="Local" VALUE="html/SetCalendarBackColor.htm">
 			</OBJECT>
 
 		<LI><OBJECT TYPE="text/sitemap">
 			<PARAM NAME="Name" VALUE="SetCalendarForeColor">
-			<PARAM NAME="Local" VALUE="SetCalendarForeColor.htm">
+			<PARAM NAME="Local" VALUE="html/SetCalendarForeColor.htm">
 			</OBJECT>
 
 		<LI><OBJECT TYPE="text/sitemap">
 			<PARAM NAME="Name" VALUE="SetCalendarTitleBackColor">
-			<PARAM NAME="Local" VALUE="SetCalendarTitleBackColor.htm">
+			<PARAM NAME="Local" VALUE="html/SetCalendarTitleBackColor.htm">
 			</OBJECT>
 
 		<LI><OBJECT TYPE="text/sitemap">
 			<PARAM NAME="Name" VALUE="SetCalendarTitleForeColor">
-			<PARAM NAME="Local" VALUE="SetCalendarTitleForeColor.htm">
+			<PARAM NAME="Local" VALUE="html/SetCalendarTitleForeColor.htm">
 			</OBJECT>
 
 		<LI><OBJECT TYPE="text/sitemap">
 			<PARAM NAME="Name" VALUE="SetCalendarTrailingForeColor">
-			<PARAM NAME="Local" VALUE="SetCalendarTrailingForeColor.htm">
+			<PARAM NAME="Local" VALUE="html/SetCalendarTrailingForeColor.htm">
 			</OBJECT>
 
 		<LI><OBJECT TYPE="text/sitemap">
 			<PARAM NAME="Name" VALUE="SetColor">
-			<PARAM NAME="Local" VALUE="SetColor.htm">
+			<PARAM NAME="Local" VALUE="html/SetColor.htm">
 			</OBJECT>
 
 		<LI><OBJECT TYPE="text/sitemap">
 			<PARAM NAME="Name" VALUE="SetCustomFormat">
-			<PARAM NAME="Local" VALUE="SetCustomFormat.htm">
+			<PARAM NAME="Local" VALUE="html/SetCustomFormat.htm">
 			</OBJECT>
 
 		<LI><OBJECT TYPE="text/sitemap">
 			<PARAM NAME="Name" VALUE="SetDisplayFormat">
-			<PARAM NAME="Local" VALUE="SetDisplayFormat.htm">
+			<PARAM NAME="Local" VALUE="html/SetDisplayFormat.htm">
 			</OBJECT>
 
 		<LI><OBJECT TYPE="text/sitemap">
 			<PARAM NAME="Name" VALUE="SetFont">
-			<PARAM NAME="Local" VALUE="SetFont.htm">
+			<PARAM NAME="Local" VALUE="html/SetFont.htm">
 			</OBJECT>
 
 		<LI><OBJECT TYPE="text/sitemap">
 			<PARAM NAME="Name" VALUE="SetFont_">
-			<PARAM NAME="Local" VALUE="SetFont_.htm">
+			<PARAM NAME="Local" VALUE="html/SetFont_.htm">
 			</OBJECT>
 
 		<LI><OBJECT TYPE="text/sitemap">
 			<PARAM NAME="Name" VALUE="SetFormat">
-			<PARAM NAME="Local" VALUE="SetFormat.htm">
+			<PARAM NAME="Local" VALUE="html/SetFormat.htm">
 			</OBJECT>
 
 		<LI><OBJECT TYPE="text/sitemap">
 			<PARAM NAME="Name" VALUE="SetMCFont">
-			<PARAM NAME="Local" VALUE="SetMCFont.htm">
+			<PARAM NAME="Local" VALUE="html/SetMCFont.htm">
 			</OBJECT>
 
 		<LI><OBJECT TYPE="text/sitemap">
 			<PARAM NAME="Name" VALUE="SetMCFont_">
-			<PARAM NAME="Local" VALUE="SetMCFont_.htm">
+			<PARAM NAME="Local" VALUE="html/SetMCFont_.htm">
 			</OBJECT>
 
 		<LI><OBJECT TYPE="text/sitemap">
 			<PARAM NAME="Name" VALUE="SetRange">
-			<PARAM NAME="Local" VALUE="SetRange.htm">
+			<PARAM NAME="Local" VALUE="html/SetRange.htm">
 			</OBJECT>
 
 		<LI><OBJECT TYPE="text/sitemap">
 			<PARAM NAME="Name" VALUE="SetRightAlign">
-			<PARAM NAME="Local" VALUE="SetRightAlign.htm">
+			<PARAM NAME="Local" VALUE="html/SetRightAlign.htm">
 			</OBJECT>
 
 		<LI><OBJECT TYPE="text/sitemap">
 			<PARAM NAME="Name" VALUE="SetSelection">
-			<PARAM NAME="Local" VALUE="SetSelection.htm">
+			<PARAM NAME="Local" VALUE="html/SetSelection.htm">
 			</OBJECT>
 
 		<LI><OBJECT TYPE="text/sitemap">
 			<PARAM NAME="Name" VALUE="SetShowNone">
-			<PARAM NAME="Local" VALUE="SetShowNone.htm">
+			<PARAM NAME="Local" VALUE="html/SetShowNone.htm">
 			</OBJECT>
 
 		<LI><OBJECT TYPE="text/sitemap">
 			<PARAM NAME="Name" VALUE="SetUpDown">
-			<PARAM NAME="Local" VALUE="SetUpDown.htm">
+			<PARAM NAME="Local" VALUE="html/SetUpDown.htm">
 			</OBJECT>
 
 		<LI><OBJECT TYPE="text/sitemap">
 			<PARAM NAME="Name" VALUE="SetVisible">
-			<PARAM NAME="Local" VALUE="SetVisible.htm">
+			<PARAM NAME="Local" VALUE="html/SetVisible.htm">
 			</OBJECT>
 
 		<LI><OBJECT TYPE="text/sitemap">
 			<PARAM NAME="Name" VALUE="SystemTimeToLong">
-			<PARAM NAME="Local" VALUE="SystemTimeToLong.htm">
+			<PARAM NAME="Local" VALUE="html/SystemTimeToLong.htm">
 			</OBJECT>
 	</UL></UL>
 <UL>
@@ -271,7 +271,7 @@
 		<UL>
 			<LI><OBJECT TYPE="text/sitemap">
 				<PARAM NAME="Name" VALUE="KCR_DateTimeControl">
-				<PARAM NAME="Local" VALUE="KCR_DateTimeControl.htm">
+				<PARAM NAME="Local" VALUE="html/KCR_DateTimeControl.htm">
 				</OBJECT>
 		</UL></UL>
 	<UL>
@@ -281,17 +281,17 @@
 		<UL>
 			<LI><OBJECT TYPE="text/sitemap">
 				<PARAM NAME="Name" VALUE="KCR_DateTimePicker">
-				<PARAM NAME="Local" VALUE="KCR_DateTimePicker.htm">
+				<PARAM NAME="Local" VALUE="html/KCR_DateTimePicker.htm">
 				</OBJECT>
 
 			<LI><OBJECT TYPE="text/sitemap">
 				<PARAM NAME="Name" VALUE="KCR_DateTimePickerClass">
-				<PARAM NAME="Local" VALUE="KCR_DateTimePickerClass.htm">
+				<PARAM NAME="Local" VALUE="html/KCR_DateTimePickerClass.htm">
 				</OBJECT>
 
 			<LI><OBJECT TYPE="text/sitemap">
 				<PARAM NAME="Name" VALUE="KCR_SubClassClientWindow">
-				<PARAM NAME="Local" VALUE="KCR_SubClassClientWindow.htm">
+				<PARAM NAME="Local" VALUE="html/KCR_SubClassClientWindow.htm">
 				</OBJECT>
 			</UL>
 		</UL>

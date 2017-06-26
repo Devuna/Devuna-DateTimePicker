@@ -1,0 +1,83 @@
+
+[OPTIONS]
+Compatibility=1.1 or later
+Compiled file=DateTimePicker.chm
+Contents file=DateTimePicker.hhc
+Default Window=default
+Default topic=html\Contents.htm
+Display compile progress=No
+Index file=DateTimePicker.hhk
+Language=0x1009 English (Canada)
+Title=Contents
+
+[WINDOWS]
+default="DateTimePicker Help","DateTimePicker.hhc","DateTimePIcker.hhk",,,,,,,0x2420,200,0x3006,[100,100,600,600],0xc40000,0x0,1,1,,,0
+
+
+[FILES]
+html\GetSelection.htm
+html\SetAppCanParse.htm
+html\GetBackgroundColor.htm
+html\SetCalendarTitleForeColor.htm
+html\SetDisplayFormat.htm
+html\SystemTimeToLong.htm
+html\KCR_DateTimePicker.htm
+html\GetColor.htm
+html\SetCalendarBackColor.htm
+html\ClearSelection.htm
+html\ShowNone.htm
+html\Refresh.htm
+html\CreateDTPicker.htm
+html\Visible.htm
+html\SetRightAlign.htm
+html\RightAlign.htm
+html\Contents.htm
+html\SetRange.htm
+html\Kill.htm
+html\SetFormat.htm
+html\LongToSystemTime.htm
+html\GetCalendarTrailingForeColor.htm
+html\GetCalendarForeColor.htm
+html\SetCalendarTitleBackColor.htm
+html\SetShowNone.htm
+html\FormatStrings.htm
+html\KCR_DateTimePickerClass.htm
+html\Introduction.htm
+html\Init.htm
+html\UpDown.htm
+html\SetCustomFormat.htm
+html\SetCalendarTrailingForeColor.htm
+html\SetBackgroundColor.htm
+html\SetUpDown.htm
+html\LOCALE_SSHORTDATE.htm
+html\CustomFormat.htm
+html\KCR_DateTimeControl.htm
+html\GetCalendarTitleForeColor.htm
+html\SetColor.htm
+html\SetFont_.htm
+html\SetFont.htm
+html\GetHwnd.htm
+html\SetMCFont_.htm
+html\KCR_SubClassClientWindow.htm
+html\AppCanParse.htm
+html\GetCalendarBackColor.htm
+html\DateTimePickerHwnd.htm
+html\SetSelection.htm
+html\SetCalendarForeColor.htm
+html\LOCALE_SLONGDATE.htm
+html\SetMCFont.htm
+html\GetCalendarTitleBackColor.htm
+html\GetRange.htm
+html\DTS_SHOWNONE.htm
+html\SetVisible.htm
+html\LOCALE_STIMEFORMAT.htm
+html\DisplayFormat.htm
+html\DTPicker.css
+images\datetimepicker.gif
+images\properties.gif
+images\exclamation.gif
+images\control.gif
+images\helpnote.gif
+
+[INFOTYPES]
+
