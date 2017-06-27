@@ -20,7 +20,6 @@
 #!    along with Devuna-DateTimePicker.  If not, see <http://www.gnu.org/licenses/>.
 #! ================================================================================
 #!endRegion
-
 #!---------------------------------------------------------------------
 #PROCEDURE(KCR_LoadSaveGlobalData,'Load/Save Global Data')
 #PROTOTYPE('(BYTE bMode),LONG,PROC')
