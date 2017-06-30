@@ -69,7 +69,7 @@ Set Variable %_SB_BACKUPDIR% to "%_SB_INSTALLDIR%\BACKUP"
 [ User Interface ]
 ! Wizard dialog definition(s)
 Define Wizard Dialog "#1" (Welcome)
-Define Wizard Dialog "CLARIONDETECTION" (<unknown dialog type>) (%_SB_INSTALLDIR%) [C100]
+Define Wizard Dialog "CLARIONDETECTION" (Clarion Environment Detection) (%_SB_INSTALLDIR%) [C100]
 Define Wizard Dialog "#3" (License Agreement)
 Define Wizard Dialog "#4" (Select Install Folder) (%_SB_INSTALLDIR%)
 Define Wizard Dialog "#5" (Ready to Install) ()
@@ -110,28 +110,28 @@ Create Installation App & Log ("[UNINSTALL_LOG]")
 ::Create Folder "%_SB_INSTALLDIR%\accessory\vendor\Devuna" [Feature:Always Install]
 ::Create Folder "%_SB_INSTALLDIR%\accessory\documents\Devuna" [Feature:Always Install]
 ::Create Folder "%_SB_INSTALLDIR%\accessory\documents\Devuna\DateTimePicker" [Feature:Always Install]
+::Create Folder "%_SB_INSTALLDIR%\accessory\addins\Devuna\Resources" [Feature:Always Install]
   
 [ Install Files ]
   
-Install File(s) "C:\GitHub\Devuna-DateTimePicker\examples\DateTimePicker\dtpicker.app" to "%_CSIDL_COMMON_DOCUMENTS%\Softvelocity\Clarion10\Accessory\Devuna\Examples\Date Time Picker\dtpicker.app" [Feature:Always Install]
-Install File(s) "C:\GitHub\Devuna-DateTimePicker\examples\DateTimePicker\dtpicker.cwproj" to "%_CSIDL_COMMON_DOCUMENTS%\Softvelocity\Clarion10\Accessory\Devuna\Examples\Date Time Picker\dtpicker.cwproj" [Feature:Always Install]
-Install File(s) "C:\GitHub\Devuna-DateTimePicker\examples\DateTimePicker\dtpicker.ico" to "%_CSIDL_COMMON_DOCUMENTS%\Softvelocity\Clarion10\Accessory\Devuna\Examples\Date Time Picker\dtpicker.ico" [Feature:Always Install]
-Install File(s) "C:\GitHub\Devuna-DateTimePicker\examples\DateTimePicker\dtpicker.sln" to "%_CSIDL_COMMON_DOCUMENTS%\Softvelocity\Clarion10\Accessory\Devuna\Examples\Date Time Picker\dtpicker.sln" [Feature:Always Install]
-Install File(s) "C:\GitHub\Devuna-DateTimePicker\documents\ReadMe.txt" to "%_CSIDL_COMMON_DOCUMENTS%\Softvelocity\Clarion10\Accessory\Devuna\Documents\Date Time Picker\ReadMe.txt" [Feature:Always Install]
 Install File(s) "C:\GitHub\Devuna-DateTimePicker\vendor\Devuna Examples.lnk" to "%_SB_INSTALLDIR%\accessory\vendor\Devuna\Devuna Examples.lnk" [Feature:Always Install]
 Install File(s) "C:\GitHub\Devuna-DateTimePicker\template\win\DateTimePicker.ico" to "%_SB_INSTALLDIR%\accessory\template\win\DateTimePicker.ico" [Feature:Always Install]
-Install File(s) "C:\GitHub\Devuna-DateTimePicker\template\win\datetimepicker.tpl" to "%_SB_INSTALLDIR%\accessory\template\win\datetimepicker.tpl" [Feature:Always Install]
+Install File(s) "C:\GitHub\Devuna-DateTimePicker\template\win\datetimepicker.tpl" to "%_SB_INSTALLDIR%\accessory\template\win\datetimepicker.tpl" [Feature:Always Install] [ClarionTpl]
 Install File(s) "C:\GitHub\Devuna-DateTimePicker\template\win\datetimepicker.tpw" to "%_SB_INSTALLDIR%\accessory\template\win\datetimepicker.tpw" [Feature:Always Install]
 Install File(s) "C:\GitHub\Devuna-DateTimePicker\libsrc\win\datetimepick.clw" to "%_SB_INSTALLDIR%\accessory\libsrc\win\datetimepick.clw" [Feature:Always Install]
-Install File(s) "C:\GitHub\Devuna-DateTimePicker\LICENSE" to "%_CSIDL_COMMON_DOCUMENTS%\Softvelocity\Clarion10\Accessory\Devuna\Documents\Date Time Picker\LICENSE" [Feature:Always Install]
+Install File(s) "C:\GitHub\Devuna-DateTimePicker\LICENSE" to "%_SB_INSTALLDIR%\accessory\documents\Devuna\DateTimePicker\LICENSE" [Feature:Always Install]
 Install File(s) "C:\GitHub\Devuna-DateTimePicker\libsrc\win\datetimepick.inc" to "%_SB_INSTALLDIR%\accessory\libsrc\win\datetimepick.inc" [Feature:Always Install]
 Install File(s) "C:\GitHub\Devuna-DateTimePicker\addins\AccessoryMenu.addin" to "%_SB_INSTALLDIR%\accessory\addins\AccessoryMenu.addin" [Feature:Always Install]
 Install File(s) "C:\GitHub\Devuna-DateTimePicker\addins\Devuna.addin" to "%_SB_INSTALLDIR%\accessory\addins\Devuna.addin" [Feature:Always Install]
 Install File(s) "C:\GitHub\Devuna-DateTimePicker\addins\DateTimePicker.addin" to "%_SB_INSTALLDIR%\accessory\addins\Devuna\DateTimePicker.addin" [Feature:Always Install]
-Install File(s) "C:\GitHub\Devuna-DateTimePicker\help\DateTimePicker.chm" to "%_SB_INSTALLDIR%\accessory\documents\Devuna\Date Time Picker\DateTimePicker.chm" [Feature:Always Install]
 Install File(s) "C:\GitHub\Devuna-DateTimePicker\help\DateTimePicker.chm" to "%_SB_INSTALLDIR%\accessory\documents\Devuna\DateTimePicker\DateTimePicker.chm" [Feature:Always Install]
 Install File(s) "C:\GitHub\Devuna-DateTimePicker\images\dtpicker.ico" to "%_SB_INSTALLDIR%\accessory\images\dtpicker.ico" [Feature:Always Install]
 Install File(s) "C:\GitHub\Devuna-DateTimePicker\LICENSE" to "%_CSIDL_COMMON_DOCUMENTS%\Softvelocity\Clarion10\Accessory\Devuna\Documents\DateTimePicker\LICENSE" [Feature:Always Install]
+Install File(s) "C:\GitHub\Devuna-DateTimePicker\addins\Resources\DevunaBitmapResources.resources" to "%_SB_INSTALLDIR%\accessory\addins\Devuna\Resources\DevunaBitmapResources.resources" [Feature:Always Install]
+Install File(s) "C:\GitHub\Devuna-DateTimePicker\examples\DateTimePicker\dtpicker.app" to "%_CSIDL_COMMON_DOCUMENTS%\Softvelocity\Clarion10\Accessory\Devuna\Examples\DateTimePicker\dtpicker.app" [Feature:Always Install]
+Install File(s) "C:\GitHub\Devuna-DateTimePicker\examples\DateTimePicker\dtpicker.cwproj" to "%_CSIDL_COMMON_DOCUMENTS%\Softvelocity\Clarion10\Accessory\Devuna\Examples\DateTimePicker\dtpicker.cwproj" [Feature:Always Install]
+Install File(s) "C:\GitHub\Devuna-DateTimePicker\examples\DateTimePicker\dtpicker.ico" to "%_CSIDL_COMMON_DOCUMENTS%\Softvelocity\Clarion10\Accessory\Devuna\Examples\DateTimePicker\dtpicker.ico" [Feature:Always Install]
+Install File(s) "C:\GitHub\Devuna-DateTimePicker\examples\DateTimePicker\dtpicker.sln" to "%_CSIDL_COMMON_DOCUMENTS%\Softvelocity\Clarion10\Accessory\Devuna\Examples\DateTimePicker\dtpicker.sln" [Feature:Always Install]
   
 [ Create Shortcuts ]
   
