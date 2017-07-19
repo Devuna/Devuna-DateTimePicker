@@ -3,22 +3,21 @@
 !                           Devuna Date Time Picker Class
 ! ================================================================================
 ! Notice : Copyright (C) 2017, Devuna
-!          Distributed under LGPLv3 (http://www.gnu.org/licenses/lgpl.html)
+!          Distributed under the MIT License (https://opensource.org/licenses/MIT)
 !
 !    This file is part of Devuna-DateTimePicker (https://github.com/Devuna/Devuna-DateTimePicker)
 !
 !    Devuna-DateTimePicker is free software: you can redistribute it and/or modify
-!    it under the terms of the GNU General Public License as published by
-!    the Free Software Foundation, either version 3 of the License, or
-!    (at your option) any later version.
+!    it under the terms of the MIT License as published by
+!    the Open Source Initiative.
 !
 !    Devuna-DateTimePicker is distributed in the hope that it will be useful,
 !    but WITHOUT ANY WARRANTY; without even the implied warranty of
 !    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-!    GNU General Public License for more details.
+!    MIT License for more details.
 !
-!    You should have received a copy of the GNU General Public License
-!    along with Devuna-DateTimePicker.  If not, see <http://www.gnu.org/licenses/>.
+!    You should have received a copy of the MIT License
+!    along with Devuna-DateTimePicker.  If not, see <https://opensource.org/licenses/MIT>.
 ! ================================================================================
 !endRegion
 
@@ -151,7 +150,7 @@ szMax                           LIKE(tagSIZE)  ! max bounding rectangle app will
                             END
 
 WM_COMMNOTIFY       EQUATE(44H)
- 
+
 ICC_DATE_CLASSES    EQUATE(100H)
 
 tagInitCommonControlsEx GROUP,TYPE
@@ -175,112 +174,112 @@ LOCALE_USER_DEFAULT    EQUATE(LANG_USER_DEFAULT)
 
 LOCALE_NOUSEROVERRIDE   EQUATE(080000000h)  ! OR in to avoid user override
 
-LOCALE_ILANGUAGE            EQUATE(00001h)  ! language id 
-LOCALE_SLANGUAGE            EQUATE(00002h)  ! localized name of language 
-LOCALE_SENGLANGUAGE         EQUATE(01001h)  ! English name of language 
-LOCALE_SABBREVLANGNAME      EQUATE(00003h)  ! abbreviated language name 
-LOCALE_SNATIVELANGNAME      EQUATE(00004h)  ! native name of language 
-LOCALE_ICOUNTRY             EQUATE(00005h)  ! country code 
-LOCALE_SCOUNTRY             EQUATE(00006h)  ! localized name of country   
-LOCALE_SENGCOUNTRY          EQUATE(01002h)  ! English name of country   
-LOCALE_SABBREVCTRYNAME      EQUATE(00007h)  ! abbreviated country name 
-LOCALE_SNATIVECTRYNAME      EQUATE(00008h)  ! native name of country   
-LOCALE_IDEFAULTLANGUAGE     EQUATE(00009h)  ! default language id 
-LOCALE_IDEFAULTCOUNTRY      EQUATE(0000Ah)  ! default country code 
-LOCALE_IDEFAULTCODEPAGE     EQUATE(0000Bh)  ! default oem code page 
-LOCALE_IDEFAULTANSICODEPAGE EQUATE(01004h)  ! default ansi code page 
-                                            
-LOCALE_SLIST                EQUATE(0000Ch)  ! list item separator 
-LOCALE_IMEASURE             EQUATE(0000Dh)  ! 0 = metric, 1 = US 
-                                            
-LOCALE_SDECIMAL             EQUATE(0000Eh)  ! decimal separator 
-LOCALE_STHOUSAND            EQUATE(0000Fh)  ! thousand separator 
-LOCALE_SGROUPING            EQUATE(00010h)  ! digit grouping 
-LOCALE_IDIGITS              EQUATE(00011h)  ! number of fractional digits 
-LOCALE_ILZERO               EQUATE(00012h)  ! leading zeros for decimal 
-LOCALE_INEGNUMBER           EQUATE(01010h)  ! negative number mode 
-LOCALE_SNATIVEDIGITS        EQUATE(00013h)  ! native ascii 0-9 
-                                            
-LOCALE_SCURRENCY            EQUATE(00014h)  ! local monetary symbol 
-LOCALE_SINTLSYMBOL          EQUATE(00015h)  ! intl monetary symbol 
-LOCALE_SMONDECIMALSEP       EQUATE(00016h)  ! monetary decimal separator 
-LOCALE_SMONTHOUSANDSEP      EQUATE(00017h)  ! monetary thousand separator 
-LOCALE_SMONGROUPING         EQUATE(00018h)  ! monetary grouping 
-LOCALE_ICURRDIGITS          EQUATE(00019h)  ! # local monetary digits 
-LOCALE_IINTLCURRDIGITS      EQUATE(0001Ah)  ! # intl monetary digits 
-LOCALE_ICURRENCY            EQUATE(0001Bh)  ! positive currency mode 
-LOCALE_INEGCURR             EQUATE(0001Ch)  ! negative currency mode 
-                                            
-LOCALE_SDATE                EQUATE(0001Dh)  ! date separator 
-LOCALE_STIME                EQUATE(0001Eh)  ! time separator 
-LOCALE_SSHORTDATE           EQUATE(0001Fh)  ! short date-time separator 
-LOCALE_SLONGDATE            EQUATE(00020h)  ! long date-time separator 
-LOCALE_STIMEFORMAT          EQUATE(01003h)  ! time format string 
-LOCALE_IDATE                EQUATE(00021h)  ! short date format ordering 
-LOCALE_ILDATE               EQUATE(00022h)  ! long date format ordering 
-LOCALE_ITIME                EQUATE(00023h)  ! time format specifier 
-LOCALE_ITIMEMARKPOSN        EQUATE(01005h)  ! time marker position 
-LOCALE_ICENTURY             EQUATE(00024h)  ! century format specifier 
-LOCALE_ITLZERO              EQUATE(00025h)  ! leading zeros in time field 
-LOCALE_IDAYLZERO            EQUATE(00026h)  ! leading zeros in day field 
-LOCALE_IMONLZERO            EQUATE(00027h)  ! leading zeros in month field 
-LOCALE_S1159                EQUATE(00028h)  ! AM designator 
-LOCALE_S2359                EQUATE(00029h)  ! PM designator 
+LOCALE_ILANGUAGE            EQUATE(00001h)  ! language id
+LOCALE_SLANGUAGE            EQUATE(00002h)  ! localized name of language
+LOCALE_SENGLANGUAGE         EQUATE(01001h)  ! English name of language
+LOCALE_SABBREVLANGNAME      EQUATE(00003h)  ! abbreviated language name
+LOCALE_SNATIVELANGNAME      EQUATE(00004h)  ! native name of language
+LOCALE_ICOUNTRY             EQUATE(00005h)  ! country code
+LOCALE_SCOUNTRY             EQUATE(00006h)  ! localized name of country
+LOCALE_SENGCOUNTRY          EQUATE(01002h)  ! English name of country
+LOCALE_SABBREVCTRYNAME      EQUATE(00007h)  ! abbreviated country name
+LOCALE_SNATIVECTRYNAME      EQUATE(00008h)  ! native name of country
+LOCALE_IDEFAULTLANGUAGE     EQUATE(00009h)  ! default language id
+LOCALE_IDEFAULTCOUNTRY      EQUATE(0000Ah)  ! default country code
+LOCALE_IDEFAULTCODEPAGE     EQUATE(0000Bh)  ! default oem code page
+LOCALE_IDEFAULTANSICODEPAGE EQUATE(01004h)  ! default ansi code page
 
-LOCALE_ICALENDARTYPE        EQUATE(01009h)  ! type of calendar specifier 
-LOCALE_IOPTIONALCALENDAR    EQUATE(0100Bh)  ! additional calendar types specifier 
+LOCALE_SLIST                EQUATE(0000Ch)  ! list item separator
+LOCALE_IMEASURE             EQUATE(0000Dh)  ! 0 = metric, 1 = US
 
-LOCALE_IFIRSTDAYOFWEEK      EQUATE(0100Ch)  ! first day of week specifier 
-LOCALE_IFIRSTWEEKOFYEAR     EQUATE(0100Dh)  ! first week of year specifier 
-                                            
-LOCALE_SDAYNAME1            EQUATE(0002Ah)  ! long name for Monday 
-LOCALE_SDAYNAME2            EQUATE(0002Bh)  ! long name for Tuesday 
-LOCALE_SDAYNAME3            EQUATE(0002Ch)  ! long name for Wednesday 
-LOCALE_SDAYNAME4            EQUATE(0002Dh)  ! long name for Thursday 
-LOCALE_SDAYNAME5            EQUATE(0002Eh)  ! long name for Friday 
-LOCALE_SDAYNAME6            EQUATE(0002Fh)  ! long name for Saturday 
-LOCALE_SDAYNAME7            EQUATE(00030h)  ! long name for Sunday 
-LOCALE_SABBREVDAYNAME1      EQUATE(00031h)  ! abbreviated name for Monday    
-LOCALE_SABBREVDAYNAME2      EQUATE(00032h)  ! abbreviated name for Tuesday   
-LOCALE_SABBREVDAYNAME3      EQUATE(00033h)  ! abbreviated name for Wednesday 
-LOCALE_SABBREVDAYNAME4      EQUATE(00034h)  ! abbreviated name for Thursday  
-LOCALE_SABBREVDAYNAME5      EQUATE(00035h)  ! abbreviated name for Friday    
-LOCALE_SABBREVDAYNAME6      EQUATE(00036h)  ! abbreviated name for Saturday  
-LOCALE_SABBREVDAYNAME7      EQUATE(00037h)  ! abbreviated name for Sunday    
-LOCALE_SMONTHNAME1          EQUATE(00038h)  ! long name for January 
-LOCALE_SMONTHNAME2          EQUATE(00039h)  ! long name for February 
-LOCALE_SMONTHNAME3          EQUATE(0003Ah)  ! long name for March 
-LOCALE_SMONTHNAME4          EQUATE(0003Bh)  ! long name for April 
-LOCALE_SMONTHNAME5          EQUATE(0003Ch)  ! long name for May 
-LOCALE_SMONTHNAME6          EQUATE(0003Dh)  ! long name for June 
-LOCALE_SMONTHNAME7          EQUATE(0003Eh)  ! long name for July 
-LOCALE_SMONTHNAME8          EQUATE(0003Fh)  ! long name for August 
-LOCALE_SMONTHNAME9          EQUATE(00040h)  ! long name for September 
-LOCALE_SMONTHNAME10         EQUATE(00041h)  ! long name for October 
-LOCALE_SMONTHNAME11         EQUATE(00042h)  ! long name for November 
-LOCALE_SMONTHNAME12         EQUATE(00043h)  ! long name for December 
-LOCALE_SMONTHNAME13         EQUATE(0100Eh)  ! long name for 13th month (if exists) 
-LOCALE_SABBREVMONTHNAME1    EQUATE(00044h)  ! abbreviated name for January 
-LOCALE_SABBREVMONTHNAME2    EQUATE(00045h)  ! abbreviated name for February 
-LOCALE_SABBREVMONTHNAME3    EQUATE(00046h)  ! abbreviated name for March 
-LOCALE_SABBREVMONTHNAME4    EQUATE(00047h)  ! abbreviated name for April 
-LOCALE_SABBREVMONTHNAME5    EQUATE(00048h)  ! abbreviated name for May 
-LOCALE_SABBREVMONTHNAME6    EQUATE(00049h)  ! abbreviated name for June 
-LOCALE_SABBREVMONTHNAME7    EQUATE(0004Ah)  ! abbreviated name for July 
-LOCALE_SABBREVMONTHNAME8    EQUATE(0004Bh)  ! abbreviated name for August 
-LOCALE_SABBREVMONTHNAME9    EQUATE(0004Ch)  ! abbreviated name for September 
-LOCALE_SABBREVMONTHNAME10   EQUATE(0004Dh)  ! abbreviated name for October 
-LOCALE_SABBREVMONTHNAME11   EQUATE(0004Eh)  ! abbreviated name for November 
-LOCALE_SABBREVMONTHNAME12   EQUATE(0004Fh)  ! abbreviated name for December 
-LOCALE_SABBREVMONTHNAME13   EQUATE(0100Fh)  ! abbreviated name for 13th month (if exists) 
-                                            
-LOCALE_SPOSITIVESIGN        EQUATE(00050h)  ! positive sign 
-LOCALE_SNEGATIVESIGN        EQUATE(00051h)  ! negative sign 
-LOCALE_IPOSSIGNPOSN         EQUATE(00052h)  ! positive sign position 
-LOCALE_INEGSIGNPOSN         EQUATE(00053h)  ! negative sign position 
-LOCALE_IPOSSYMPRECEDES      EQUATE(00054h)  ! mon sym precedes pos amt 
-LOCALE_IPOSSEPBYSPACE       EQUATE(00055h)  ! mon sym sep by space from pos  
-LOCALE_INEGSYMPRECEDES      EQUATE(00056h)  ! mon sym precedes neg amt 
+LOCALE_SDECIMAL             EQUATE(0000Eh)  ! decimal separator
+LOCALE_STHOUSAND            EQUATE(0000Fh)  ! thousand separator
+LOCALE_SGROUPING            EQUATE(00010h)  ! digit grouping
+LOCALE_IDIGITS              EQUATE(00011h)  ! number of fractional digits
+LOCALE_ILZERO               EQUATE(00012h)  ! leading zeros for decimal
+LOCALE_INEGNUMBER           EQUATE(01010h)  ! negative number mode
+LOCALE_SNATIVEDIGITS        EQUATE(00013h)  ! native ascii 0-9
+
+LOCALE_SCURRENCY            EQUATE(00014h)  ! local monetary symbol
+LOCALE_SINTLSYMBOL          EQUATE(00015h)  ! intl monetary symbol
+LOCALE_SMONDECIMALSEP       EQUATE(00016h)  ! monetary decimal separator
+LOCALE_SMONTHOUSANDSEP      EQUATE(00017h)  ! monetary thousand separator
+LOCALE_SMONGROUPING         EQUATE(00018h)  ! monetary grouping
+LOCALE_ICURRDIGITS          EQUATE(00019h)  ! # local monetary digits
+LOCALE_IINTLCURRDIGITS      EQUATE(0001Ah)  ! # intl monetary digits
+LOCALE_ICURRENCY            EQUATE(0001Bh)  ! positive currency mode
+LOCALE_INEGCURR             EQUATE(0001Ch)  ! negative currency mode
+
+LOCALE_SDATE                EQUATE(0001Dh)  ! date separator
+LOCALE_STIME                EQUATE(0001Eh)  ! time separator
+LOCALE_SSHORTDATE           EQUATE(0001Fh)  ! short date-time separator
+LOCALE_SLONGDATE            EQUATE(00020h)  ! long date-time separator
+LOCALE_STIMEFORMAT          EQUATE(01003h)  ! time format string
+LOCALE_IDATE                EQUATE(00021h)  ! short date format ordering
+LOCALE_ILDATE               EQUATE(00022h)  ! long date format ordering
+LOCALE_ITIME                EQUATE(00023h)  ! time format specifier
+LOCALE_ITIMEMARKPOSN        EQUATE(01005h)  ! time marker position
+LOCALE_ICENTURY             EQUATE(00024h)  ! century format specifier
+LOCALE_ITLZERO              EQUATE(00025h)  ! leading zeros in time field
+LOCALE_IDAYLZERO            EQUATE(00026h)  ! leading zeros in day field
+LOCALE_IMONLZERO            EQUATE(00027h)  ! leading zeros in month field
+LOCALE_S1159                EQUATE(00028h)  ! AM designator
+LOCALE_S2359                EQUATE(00029h)  ! PM designator
+
+LOCALE_ICALENDARTYPE        EQUATE(01009h)  ! type of calendar specifier
+LOCALE_IOPTIONALCALENDAR    EQUATE(0100Bh)  ! additional calendar types specifier
+
+LOCALE_IFIRSTDAYOFWEEK      EQUATE(0100Ch)  ! first day of week specifier
+LOCALE_IFIRSTWEEKOFYEAR     EQUATE(0100Dh)  ! first week of year specifier
+
+LOCALE_SDAYNAME1            EQUATE(0002Ah)  ! long name for Monday
+LOCALE_SDAYNAME2            EQUATE(0002Bh)  ! long name for Tuesday
+LOCALE_SDAYNAME3            EQUATE(0002Ch)  ! long name for Wednesday
+LOCALE_SDAYNAME4            EQUATE(0002Dh)  ! long name for Thursday
+LOCALE_SDAYNAME5            EQUATE(0002Eh)  ! long name for Friday
+LOCALE_SDAYNAME6            EQUATE(0002Fh)  ! long name for Saturday
+LOCALE_SDAYNAME7            EQUATE(00030h)  ! long name for Sunday
+LOCALE_SABBREVDAYNAME1      EQUATE(00031h)  ! abbreviated name for Monday
+LOCALE_SABBREVDAYNAME2      EQUATE(00032h)  ! abbreviated name for Tuesday
+LOCALE_SABBREVDAYNAME3      EQUATE(00033h)  ! abbreviated name for Wednesday
+LOCALE_SABBREVDAYNAME4      EQUATE(00034h)  ! abbreviated name for Thursday
+LOCALE_SABBREVDAYNAME5      EQUATE(00035h)  ! abbreviated name for Friday
+LOCALE_SABBREVDAYNAME6      EQUATE(00036h)  ! abbreviated name for Saturday
+LOCALE_SABBREVDAYNAME7      EQUATE(00037h)  ! abbreviated name for Sunday
+LOCALE_SMONTHNAME1          EQUATE(00038h)  ! long name for January
+LOCALE_SMONTHNAME2          EQUATE(00039h)  ! long name for February
+LOCALE_SMONTHNAME3          EQUATE(0003Ah)  ! long name for March
+LOCALE_SMONTHNAME4          EQUATE(0003Bh)  ! long name for April
+LOCALE_SMONTHNAME5          EQUATE(0003Ch)  ! long name for May
+LOCALE_SMONTHNAME6          EQUATE(0003Dh)  ! long name for June
+LOCALE_SMONTHNAME7          EQUATE(0003Eh)  ! long name for July
+LOCALE_SMONTHNAME8          EQUATE(0003Fh)  ! long name for August
+LOCALE_SMONTHNAME9          EQUATE(00040h)  ! long name for September
+LOCALE_SMONTHNAME10         EQUATE(00041h)  ! long name for October
+LOCALE_SMONTHNAME11         EQUATE(00042h)  ! long name for November
+LOCALE_SMONTHNAME12         EQUATE(00043h)  ! long name for December
+LOCALE_SMONTHNAME13         EQUATE(0100Eh)  ! long name for 13th month (if exists)
+LOCALE_SABBREVMONTHNAME1    EQUATE(00044h)  ! abbreviated name for January
+LOCALE_SABBREVMONTHNAME2    EQUATE(00045h)  ! abbreviated name for February
+LOCALE_SABBREVMONTHNAME3    EQUATE(00046h)  ! abbreviated name for March
+LOCALE_SABBREVMONTHNAME4    EQUATE(00047h)  ! abbreviated name for April
+LOCALE_SABBREVMONTHNAME5    EQUATE(00048h)  ! abbreviated name for May
+LOCALE_SABBREVMONTHNAME6    EQUATE(00049h)  ! abbreviated name for June
+LOCALE_SABBREVMONTHNAME7    EQUATE(0004Ah)  ! abbreviated name for July
+LOCALE_SABBREVMONTHNAME8    EQUATE(0004Bh)  ! abbreviated name for August
+LOCALE_SABBREVMONTHNAME9    EQUATE(0004Ch)  ! abbreviated name for September
+LOCALE_SABBREVMONTHNAME10   EQUATE(0004Dh)  ! abbreviated name for October
+LOCALE_SABBREVMONTHNAME11   EQUATE(0004Eh)  ! abbreviated name for November
+LOCALE_SABBREVMONTHNAME12   EQUATE(0004Fh)  ! abbreviated name for December
+LOCALE_SABBREVMONTHNAME13   EQUATE(0100Fh)  ! abbreviated name for 13th month (if exists)
+
+LOCALE_SPOSITIVESIGN        EQUATE(00050h)  ! positive sign
+LOCALE_SNEGATIVESIGN        EQUATE(00051h)  ! negative sign
+LOCALE_IPOSSIGNPOSN         EQUATE(00052h)  ! positive sign position
+LOCALE_INEGSIGNPOSN         EQUATE(00053h)  ! negative sign position
+LOCALE_IPOSSYMPRECEDES      EQUATE(00054h)  ! mon sym precedes pos amt
+LOCALE_IPOSSEPBYSPACE       EQUATE(00055h)  ! mon sym sep by space from pos
+LOCALE_INEGSYMPRECEDES      EQUATE(00056h)  ! mon sym precedes neg amt
 LOCALE_INEGSEPBYSPACE       EQUATE(00057h)  ! mon sym sep by space from neg
 
 DEFAULT_PITCH       EQUATE(0)
@@ -416,7 +415,7 @@ ControlStyle  LONG
   END
 
   RETURN(TRUE)
-   
+
 
 DTPicker.Refresh  PROCEDURE()
 systime     LIKE(tagSYSTEMTIME)
